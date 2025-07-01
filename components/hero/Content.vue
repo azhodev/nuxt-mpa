@@ -21,7 +21,7 @@
                 width="138"
                 class="absolute bottom-full hidden lg:block"
             />
-            <Navigation class="flex flex-col py-7 px-0 lg:px-5" />
+            <Navigation class="flex flex-col gap-2 py-7 px-0 lg:px-5" link-class="hover:scale-110 transition-transform duration-75" />
         </div>
     </div>
 </template>

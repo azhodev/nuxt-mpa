@@ -4,6 +4,7 @@ import { defineStore } from 'pinia'
 export const useRouteInfo = defineStore('routeInfo', () => {
   const route = useRoute()
   const isHomePage = computed(() => route.name === 'index')
+  const routePath = computed(() => route.path)
 
-  return { isHomePage }
+  return { isHomePage, routePath }
 })

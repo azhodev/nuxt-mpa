@@ -5,21 +5,21 @@ const { data: home } = await useAsyncData(() => queryCollection('content').path(
 console.log('home', home.value);
 
 onMounted(() => {
-    const header = document.getElementById('layout-header')
-    const hero = document.getElementById('hero-section')
+  const header = document.getElementById('layout-header')
+  const hero = document.getElementById('hero-section')
 
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (!entry.isIntersecting) {
-                header?.classList.add('fixed-header')
-            } else {
-                header?.classList.remove('fixed-header')
-            }
-        },
-        { threshold: 0.1 }
-    )
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        header?.classList.add('fixed-header')
+      } else {
+        header?.classList.remove('fixed-header')
+      }
+    },
+    { threshold: 0.1 }
+  )
 
-    if (hero) observer.observe(hero)
+  if (hero) observer.observe(hero)
 })
 </script>
 
@@ -31,10 +31,19 @@ onMounted(() => {
   >
     <div class="container h-full flex flex-col justify-center items-end text-secondary pt-30 lg:pt-0">
       <div class="self-stretch flex flex-col">
-        <HeroContent />
-        <HeroStats />
+        <div v-if="routeInfo.isHomePage">
+          <HeroContent />
+          <HeroStats />
+        </div>
+
+        <div v-else-if="!routeInfo.isHomePage">
+          <div class="flex justify-center">
+            <h1 class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] mb-5 text-accent font-serif">
+              Page Title
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
-

@@ -103,7 +103,7 @@
   /* Цвет действия удалить, ошибка */
   --destructive-foreground: oklch(0.577 0.245 27.325);
   /* Цвет текста на фоне destructive */
-  --border: rgba(248, 237, 217, 0.253);
+  --border: rgba(248, 237, 217, 0.137);
   /* Цвет границ элементов */
   --input: oklch(0.922 0 0);
   /* Цвет фона инпутов */
@@ -174,15 +174,43 @@
     @apply border-border outline-ring/50;
   }
 
+  html {}
+
   body {
     @apply bg-background text-foreground m-0;
     font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow-y: scroll;
   }
+
+  h2 {
+    color: #000;
+    font-family: "Source Serif 4";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
 }
 
 @layer components {
-  .fixed-header {
-    @apply translate-y-full;
+  .btn {
+    transition: transform .2s;
+    border-radius: 4px;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+  .btn:active {
+    transform: scale(.9)
   }
 }
 
@@ -201,20 +229,56 @@
     @apply h-[350px];
   }
 
-  .btn {
-    transition: transform .2s;
+  .fixed-header {
+    @apply translate-y-full;
   }
 
-  .btn:hover {
-    transform: scale(1.05);
+  .animate-underline {
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-size: 0 5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s;
   }
 
-  .btn:active {
-    transform: scale(.9)
+  .animate-underline:hover {
+    background-size: 100% 5px;
   }
 
   .border-l-divider {
     @apply border-l border-border
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-out-down {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.3s ease-out forwards;
+  }
+
+  .animate-fade-out-down {
+    animation: fade-out-down 0.3s ease-in forwards;
   }
 
 }
