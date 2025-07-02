@@ -32,7 +32,7 @@ onMounted(() => {
 <template>
   <div
     id="hero-section"
-    class="w-full bg-black/80 transition-[height] duration-500 ease-in-out overflow-hidden"
+    class="hero-section section-with-rounded-corners w-full bg-black/80 transition-[height] duration-500 ease-in-out relative overflow-hidden"
     :class="routeInfo.isHomePage ? 'hero-expanded pt-30 lg:pt-0' : 'hero-collapsed pt-15'"
   >
     <LayoutSiteVideo />
@@ -46,12 +46,16 @@ onMounted(() => {
 
         <div v-else-if="!routeInfo.isHomePage">
           <div class="flex justify-center">
-            <h1 class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] text-accent font-serif text-center">
+            <h1
+              class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] text-accent font-serif text-center">
               {{ pageTitle }}
             </h1>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="corner-mask corner-mask-left"></div>
+    <div class="corner-mask corner-mask-right"></div>
   </div>
 </template>

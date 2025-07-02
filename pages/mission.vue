@@ -46,7 +46,6 @@ const features = [
                     class="w-full h-full object-cover"
                 />
             </div>
-
         </div>
     </div>
 </template>

@@ -214,6 +214,10 @@
   .btn:active {
     transform: scale(.9)
   }
+
+  .card {
+    transition: transform .2s;
+  }
 }
 
 @layer utilities {
@@ -222,13 +226,42 @@
     padding-inline: 1.25rem;
   }
 
-  .hero-expanded {
-    @apply h-auto lg:h-[100vh] pb-30 lg:pb-0;
-
+  .hero-section {
+    @apply lg:h-screen;
+    transition: max-height 0.3s ease, height .3s ease;
+    border: 0;
+    box-shadow: none;
   }
 
   .hero-collapsed {
-    @apply h-[350px];
+    @apply max-h-[350px] h-[350px];
+  }
+
+  .hero-expanded {
+    @apply max-h-500 lg:max-h-[100vh] pb-30 lg:pb-0;
+  }
+
+  .hero-section::before,
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    /* Размер области скругления */
+    background: white;
+    z-index: 2;
+    /* Маска: прозрачный круг в углу */
+    mask: radial-gradient(circle at 0 100%, transparent 70%, white 70.1%);
+    @apply lg:hidden w-15 h-15;
+  }
+
+  .hero-section::before {
+    left: 0;
+    mask: radial-gradient(circle at 102% -5%, transparent 70%, white 72.1%);
+  }
+
+  .hero-section::after {
+    right: 0;
+    mask: radial-gradient(circle at 2% -5%, transparent 70%, white 72.1%);
   }
 
   .fixed-header {
