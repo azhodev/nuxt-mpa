@@ -6,8 +6,6 @@ import {
     DialogContent,
     DialogHeader,
     DialogTitle,
-    DialogFooter,
-    DialogClose,
     DialogDescription,
 } from "@/components/ui/dialog";
 
@@ -18,7 +16,7 @@ import { MENU_DATA } from "~/data/menu";
     <Dialog>
         <DialogTrigger as-child>
             <UiButton
-                class="px-4 py-2 rounded-md border hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                class="btn px-4 py-2 rounded-md border hover:bg-gray-100 dark:hover:bg-gray-800 transition"
             >
                 Menu
             </UiButton>
@@ -36,15 +34,6 @@ import { MENU_DATA } from "~/data/menu";
 
             <Navigation class="flex flex-col gap-2 font-bold" link-class="" />
 
-            <!-- <DialogFooter class="mt-6">
-                <DialogClose as-child aria-label="Close">
-                    <button
-                        class="w-full px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition"
-                    >
-                        Close
-                    </button>
-                </DialogClose>
-            </DialogFooter> -->
         </DialogContent>
     </Dialog>
 </template>
