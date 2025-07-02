@@ -5,6 +5,7 @@ const routeInfo = useRouteInfo()
 
 <template>
     <div>
+        <!-- Mobile -->
         <div
             class="fixed flex lg:hidden bottom-full w-full z-20 bg-black/40 hover:bg-black/80 text-primary transition-all translate-y-full"
             id="layout-header"
@@ -23,6 +24,7 @@ const routeInfo = useRouteInfo()
             </div>
         </div>
         
+        <!-- Desktop -->
         <div
             class="fixed hidden lg:flex bottom-full w-full z-20 bg-black/40 hover:bg-black/80 text-primary transition-all"
             id="layout-header"

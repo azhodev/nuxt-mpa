@@ -26,10 +26,12 @@ onMounted(() => {
 <template>
   <div
     id="hero-section"
-    class="relative w-full pb-30 lg:pb-0 bg-black/80 transition-[height] duration-500 ease-in-out overflow-hidden"
-    :class="routeInfo.isHomePage ? 'hero-expanded' : 'hero-collapsed'"
+    class="w-full bg-black/80 transition-[height] duration-500 ease-in-out overflow-hidden"
+    :class="routeInfo.isHomePage ? 'hero-expanded pt-30 lg:pt-0' : 'hero-collapsed pt-15'"
   >
-    <div class="container h-full flex flex-col justify-center items-end text-secondary pt-30 lg:pt-0">
+    <LayoutSiteVideo />
+
+    <div class="container h-full flex flex-col justify-center items-end text-secondary">
       <div class="self-stretch flex flex-col">
         <div v-if="routeInfo.isHomePage">
           <HeroContent />
@@ -38,7 +40,7 @@ onMounted(() => {
 
         <div v-else-if="!routeInfo.isHomePage">
           <div class="flex justify-center">
-            <h1 class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] mb-5 text-accent font-serif">
+            <h1 class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] text-accent font-serif">
               Page Title
             </h1>
           </div>

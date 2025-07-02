@@ -193,7 +193,7 @@
 
   h3 {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
   }
 
@@ -221,7 +221,7 @@
   }
 
   .hero-expanded {
-    @apply h-auto lg:h-[100vh];
+    @apply h-auto lg:h-[100vh] pb-30 lg:pb-0;
 
   }
 
