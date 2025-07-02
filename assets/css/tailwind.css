@@ -245,6 +245,11 @@
     background-size: 100% 5px;
   }
 
+  .animate-underline:active,
+  .animate-underline:focus {
+    background-size: 0 5px;
+  }
+
   .border-l-divider {
     @apply border-l border-border
   }
