@@ -1,8 +1,14 @@
 <script setup lang="ts">
+import { MENU_DATA } from '~/data/menu';
 const routeInfo = useRouteInfo()
 
 const { data: home } = await useAsyncData(() => queryCollection('content').path('/home').first())
 console.log('home', home.value);
+
+const pageTitle = computed(() => {
+  const current = MENU_DATA.find((item) => item.to === routeInfo.routePath)
+  return current?.label || 'Page'
+})
 
 onMounted(() => {
   const header = document.getElementById('layout-header')
@@ -40,8 +46,8 @@ onMounted(() => {
 
         <div v-else-if="!routeInfo.isHomePage">
           <div class="flex justify-center">
-            <h1 class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] text-accent font-serif">
-              Page Title
+            <h1 class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] text-accent font-serif text-center">
+              {{ pageTitle }}
             </h1>
           </div>
         </div>
