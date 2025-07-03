@@ -23,11 +23,12 @@ const closeMenu = () => {
                 <div class="w-[90vw] max-w-[450px] bg-popover text-popover-foreground h-full p-6 flex flex-col">
                     <!-- Кнопка закрытия -->
                     
-                    <HeaderBurgerButton />
+                    <HeaderBurgerButton color-class="bg-accent" />
                     <NuxtImg src="/logo-black.png" width="183" height="124"/>
                     <Navigation
                         class="flex flex-col gap-2 py-7 px-0 lg:px-5"
                         link-class="hover:scale-110 transition-transform duration-75"
+                        @link-click="isOpen = false"
                     />
                     <WaweButton>Contact Us</WaweButton>
                 </div>

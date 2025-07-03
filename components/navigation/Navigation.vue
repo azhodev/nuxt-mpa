@@ -7,6 +7,8 @@ const props = defineProps({
     linkClass: { type: String, default: "" },
 });
 
+const emit = defineEmits(['link-click']);
+
 const routeInfo = useRouteInfo();
 </script>
 
@@ -23,6 +25,7 @@ const routeInfo = useRouteInfo();
                         routeInfo.routePath === link.to,
                 },
             ]"
+            @click="emit('link-click', link)"
         >
             {{ link.label }}
         </NuxtLink>

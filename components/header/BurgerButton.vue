@@ -1,55 +1,49 @@
 <script setup lang="ts">
-const isOpen = useState("burgerOpen", () => false);
+defineProps<{
+  colorClass?: string
+}>()
+
+const isOpen = useState("burgerOpen", () => false)
 
 const toggleMenu = () => {
-    isOpen.value = !isOpen.value;
-};
+  isOpen.value = !isOpen.value
+}
 </script>
 
 <template>
-    <button @click="toggleMenu" class="z-50 relative">
-        <div class="ham-menu" :class="{ active: isOpen }">
-            <span></span><span></span><span></span>
-        </div>
-    </button>
+  <button @click="toggleMenu" class="z-50 relative w-10 h-10">
+    <div class="relative w-full h-full">
+      <!-- Line 1 -->
+      <span
+        :class="[
+          'absolute w-full h-[5px] rounded-full transition-all duration-200 ease-in-out',
+          colorClass || 'bg-accent',
+          isOpen
+            ? 'top-1/2 -translate-x-1/2 translate-y-0 rotate-45'
+            : 'top-[25%] -translate-x-1/2 -translate-y-1/2 rotate-0',
+          'left-1/2'
+        ]"
+      />
+      <!-- Line 2 -->
+      <span
+        :class="[
+          'absolute w-full h-[5px] rounded-full transition-all duration-200 ease-in-out',
+          colorClass || 'bg-accent',
+          isOpen ? 'opacity-0' : 'opacity-100',
+          'top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2'
+        ]"
+      />
+      <!-- Line 3 -->
+      <span
+        :class="[
+          'absolute w-full h-[5px] rounded-full transition-all duration-200 ease-in-out',
+          colorClass || 'bg-accent',
+          isOpen
+            ? 'top-1/2 -translate-x-1/2 -translate-y-0 -rotate-45'
+            : 'top-[75%] -translate-x-1/2 -translate-y-1/2 rotate-0',
+          'left-1/2'
+        ]"
+      />
+    </div>
+  </button>
 </template>
-
-<style scoped>
-.ham-menu {
-    height: 40px;
-    width: 40px;
-    position: relative;
-}
-
-.ham-menu span {
-    height: 5px;
-    width: 100%;
-    background-color: var(--accent);
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    transition: 0.1s ease-in-out;
-}
-
-.ham-menu span:nth-child(1) {
-    top: 25%;
-}
-
-.ham-menu span:nth-child(3) {
-    top: 75%;
-}
-
-.ham-menu.active span:nth-child(1) {
-    transform: translate(-50%, 200%) rotate(45deg);
-}
-
-.ham-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.ham-menu.active span:nth-child(3) {
-    transform: translate(-50%, -200%) rotate(-45deg);
-}
-</style>
