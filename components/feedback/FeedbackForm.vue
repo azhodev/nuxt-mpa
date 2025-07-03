@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useForm } from 'vee-validate'
+import { useForm, configure } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
 
@@ -15,6 +15,14 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea' // если у тебя нет этого компонента, нужно его добавить
 
+// Default values
+configure({
+  validateOnBlur: true, // controls if `blur` events should trigger validation with `handleChange` handler
+  validateOnChange: false, // controls if `change` events should trigger validation with `handleChange` handler
+  validateOnInput: false, // controls if `input` events should trigger validation with `handleChange` handler
+  validateOnModelUpdate: false, // controls if `update:modelValue` events should trigger validation with `handleChange` handler
+});
+
 // Валидация с Zod
 const formSchema = toTypedSchema(z.object({
     name: z.string().min(2, "Name is too short").max(50),
@@ -24,6 +32,7 @@ const formSchema = toTypedSchema(z.object({
 
 const form = useForm({
     validationSchema: formSchema,
+    validateOnMount: false,       // не валидировать при загрузке
 })
 
 const onSubmit = form.handleSubmit((values) => {
@@ -87,9 +96,10 @@ const onSubmit = form.handleSubmit((values) => {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                     <Textarea
-                        rows="4"
+                        rows="3"
+                        style="resize: none;"
                         placeholder="Your message here..."
-                        class="resize-none h-40 overflow-y-auto overflow-x-hidden"
+                        class="resize-none overflow-y-scroll overflow-x-hidden"
                         v-bind="componentField"
                     />
                 </FormControl>

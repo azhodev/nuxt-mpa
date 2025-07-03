@@ -1,39 +1,9 @@
 <script setup lang="ts">
 import { contactGroups } from '~/data/contactGroups';
+import { cards } from '~/data/homeCards';
 
-const cards = [
-  {
-    to: "/about",
-    image: "/cards/1.jpeg",
-    title: "About us",
-    description:
-      "To accomplish its long-term goal, Agrofusion has developed a robust origination network over the years…"
-  },
-  {
-    to: "/mission",
-    image: "/cards/2.jpeg",
-    title: "Our mission",
-    description:
-      "Our mission is to be the trusted partner for our partners. We strive to deliver exceptional service and value through: …"
-  },
-  {
-    to: "/commodities",
-    image: "/cards/3.jpg",
-    title: "Our Commodities",
-    description:
-      "Agrofusion is dedicated to operating with the highest ethical standards. Discover more about our deeply rooted principles"
-  },
-  {
-    to: "/contacts",
-    image: "/cards/4.jpeg",
-    title: "Offices & Contacts",
-    description:
-      "Agrofusion is committed to work with the highest ethical standards. Learn more about the deeply ingrained principles…"
-  }
-]
-
+const HomeCard = defineAsyncComponent(() => import('@/components/HomeCard.vue'))
 // TODO:
-// Добавить Drawer для связи
 // Добавить Gsap для анимации появления числовых данных в hero, кнопки "contact us" 
 
 </script>
@@ -54,6 +24,7 @@ const cards = [
         </div>
         <div class="xs:basis-[400px] min-h-[636px] relative rounded-[24px] overflow-hidden">
           <NuxtImg
+            alt="The Catcher in the Rye"
             src="/cards/5.jpg"
             class="absolute top-0 left-0 w-full h-full object-cover"
           />
@@ -73,4 +44,3 @@ const cards = [
     </div>
   </div>
 </template>
-

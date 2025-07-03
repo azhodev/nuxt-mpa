@@ -7,19 +7,15 @@ const headerRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
     const hero = document.getElementById("hero-section");
-    let timeoutId: number | null = null;
 
     const observer = new IntersectionObserver(
         ([entry]) => {
             if (!entry.isIntersecting) {
-                timeoutId = window.setTimeout(() => {
-                    headerRef.value?.classList.add("fixed-header");
-                    if (!routeInfo.isHomePage) {
-                        headerRef.value?.classList.remove("absolute-header");
-                    }
-                }, 50);
+                headerRef.value?.classList.add("fixed-header");
+                if (!routeInfo.isHomePage) {
+                    headerRef.value?.classList.remove("absolute-header");
+                }
             } else {
-                if (timeoutId) clearTimeout(timeoutId);
                 headerRef.value?.classList.remove("fixed-header");
                 if (!routeInfo.isHomePage) {
                     headerRef.value?.classList.add("absolute-header");
@@ -59,6 +55,7 @@ watch(
                     width="84px"
                     height="52"
                     class="my-1"
+                    alt="Logo Icon"
                 />
             </NuxtLink>
             <!-- Desktop -->

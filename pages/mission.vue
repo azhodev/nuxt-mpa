@@ -28,7 +28,8 @@ const features = [
         <div class="container grid lg:grid-cols-[auto_510px] gap-5 xl:gap-x-[115px]">
             <div class="bg-secondary text-secondary-foreground py-10 px-8 rounded-[12px]">
                 <h2 class="text-secondary-foreground">Our Mission</h2>
-                <p class="max-w-[530px]">Our mission is to be the trusted partner for our partners. We strive to deliver exceptional service
+                <p class="max-w-[530px]">Our mission is to be the trusted partner for our partners. We strive to deliver
+                    exceptional service
                     and value through:</p>
             </div>
 
@@ -42,6 +43,7 @@ const features = [
 
             <div class="rounded-[12px] mt-10 lg:mt-0 overflow-hidden">
                 <NuxtImg
+                    alt="Grains in hands"
                     src="/mission-card-bg.png"
                     class="w-full h-full object-cover"
                 />

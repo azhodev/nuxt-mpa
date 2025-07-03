@@ -74,25 +74,25 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: oklch(89.755% 0.0001 271.152);
   /* Цвет основного фона*/
   --foreground: oklch(0.145 0 0);
   /* Цвет основного текста */
-  --card: oklch(1 0 0);
+  --card: oklch(89.755% 0.0001 271.152);
   /* Цвет карточки */
   --card-foreground: oklch(0.145 0 0);
   /* Цвет текста на карточке */
-  --popover: oklch(1 0 0);
+  --popover: oklch(89.755% 0.0001 271.152);
   /* Цвет всплывающего окна */
   --popover-foreground: #347854;
   /* Цвет текста во всплывающем окне */
-  --primary: #FFF;
+  --primary: oklch(89.755% 0.0001 271.152);
   /* Основной цвет интерфейса: кнопка "Сохр." */
   --primary-foreground: #000000;
   /* Цвет текста на фоне primary */
   --secondary: #347854;
   /* Вторичная кнопка... */
-  --secondary-foreground: #FFF;
+  --secondary-foreground: oklch(89.755% 0.0001 271.152);
   /* Цвет текста на фоне secondary */
   --muted: oklch(0.97 0 0);
   /* Приглушённый цвет фона/границ */
@@ -100,7 +100,7 @@
   /* Приглушённый цвет текста */
   --accent: #347854;
   /* Выделяющий/дополнительный цвет */
-  --accent-foreground: #FFFFFF;
+  --accent-foreground: oklch(89.755% 0.0001 271.152);
   /* Цвет текста на фоне accent */
   --destructive: oklch(0.577 0.245 27.325);
   /* Цвет действия удалить, ошибка */

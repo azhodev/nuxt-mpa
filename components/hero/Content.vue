@@ -17,6 +17,7 @@
                 src="/logo.png"
                 width="138"
                 class="absolute bottom-full hidden lg:block"
+                alt="Logo Icon"
             />
             <Navigation
                 class="flex flex-col gap-2 py-7 px-0 lg:px-5"

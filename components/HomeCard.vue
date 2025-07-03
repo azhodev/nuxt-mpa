@@ -6,6 +6,7 @@
         <NuxtImg
             :src="image"
             class="absolute top-0 left-0 w-full h-full object-cover"
+            :alt="title"
         />
         <div
             class="absolute h-full p-5 flex flex-col items-start justify-between bg-black/40 text-secondary-foreground">

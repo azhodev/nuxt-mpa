@@ -6,13 +6,15 @@
           <h2 class="mb-4 text-secondary-foreground">About Us</h2>
           <p class="leading-relaxed text-sm sm:text-base">
             Headquartered in Ukraine with offices in major agricultural hubs, Agrofusion is a dynamic, medium-sized
-            organization dedicated to delivering customized solutions to our long-standing international clients. We offer
+            organization dedicated to delivering customized solutions to our long-standing international clients. We
+            offer
             a sophisticated and professional alternative in the ever-evolving grain market landscape.
             The core business of Agrofusion revolves around the purchase and sale of physical agricultural commodities
             such as wheat, corn, barley, and soybeans. Our expertise extends to Structured Trade Finance, Shipping, and
             Logistics. Agrofusion boasts its own origination capabilities in Ukraine and other key regions, complemented
             by strategic partnerships in several vital origination markets.
-            At Agrofusion, we pride ourselves on our professionalism, flexibility, and commitment to reliability, ensuring
+            At Agrofusion, we pride ourselves on our professionalism, flexibility, and commitment to reliability,
+            ensuring
             that we meet the unique needs of each client and consistently deliver excellence in every transaction.
           </p>
           <FeedbackDrawer>
@@ -22,7 +24,11 @@
           </FeedbackDrawer>
         </div>
         <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden">
-          <NuxtImg src="/bg-about-us.png" class="w-full" />
+          <NuxtImg
+            src="/bg-about-us.png"
+            class="w-full"
+            alt="Factory Image"
+          />
         </div>
       </section>
     </div>

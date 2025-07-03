@@ -2,9 +2,6 @@
 import { MENU_DATA } from '~/data/menu';
 const routeInfo = useRouteInfo()
 
-const { data: home } = await useAsyncData(() => queryCollection('content').path('/home').first())
-console.log('home', home.value);
-
 const pageTitle = computed(() => {
   const current = MENU_DATA.find((item) => item.to === routeInfo.routePath)
   return current?.label || 'Page'

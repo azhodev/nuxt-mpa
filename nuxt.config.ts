@@ -12,7 +12,6 @@ export default defineNuxtConfig({
         "@nuxt/content",
         "@nuxt/image",
         "@pinia/nuxt",
-        "@nuxt/icon",
         '@vee-validate/nuxt',
     ],
 
@@ -31,6 +30,10 @@ export default defineNuxtConfig({
             Inter: [400, 600],
             "Source Serif 4": [400],
         },
+    },
+
+    nitro: {
+        compressPublicAssets: true, // ✅ вкл. сжатие public-ресурсов
     },
 
     app: {
