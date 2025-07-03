@@ -8,10 +8,12 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
+
+const isDrawerOpen = useState('drawerOpen', () => false)
 </script>
 
 <template>
-  <Drawer>
+  <Drawer v-model:open="isDrawerOpen">
     <DrawerTrigger as-child>
       <slot />
     </DrawerTrigger>

@@ -2,6 +2,7 @@
 import { useForm, configure } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
+import { toast } from 'vue-sonner'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -15,12 +16,14 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea' // если у тебя нет этого компонента, нужно его добавить
 
+const isDrawerOpen = useState('drawerOpen')
+
 // Default values
 configure({
-  validateOnBlur: true, // controls if `blur` events should trigger validation with `handleChange` handler
-  validateOnChange: false, // controls if `change` events should trigger validation with `handleChange` handler
-  validateOnInput: false, // controls if `input` events should trigger validation with `handleChange` handler
-  validateOnModelUpdate: false, // controls if `update:modelValue` events should trigger validation with `handleChange` handler
+    validateOnBlur: true, // controls if `blur` events should trigger validation with `handleChange` handler
+    validateOnChange: false, // controls if `change` events should trigger validation with `handleChange` handler
+    validateOnInput: false, // controls if `input` events should trigger validation with `handleChange` handler
+    validateOnModelUpdate: false, // controls if `update:modelValue` events should trigger validation with `handleChange` handler
 });
 
 // Валидация с Zod
@@ -37,6 +40,14 @@ const form = useForm({
 
 const onSubmit = form.handleSubmit((values) => {
     console.log('Feedback submitted:', values)
+    isDrawerOpen.value = false
+    toast('Thank you for your feedback!', {
+        description: 'We’ve received your message and will get back to you soon.',
+        action: {
+            label: 'Close',
+            onClick: () => console.log('Toast closed'),
+        },
+    })
 })
 </script>
 
@@ -113,7 +124,7 @@ const onSubmit = form.handleSubmit((values) => {
         <!-- Submit Button -->
         <Button
             type="submit"
-            class="btn bg-accent text-accent-foreground rounded-xl"
+            class="btn bg-accent text-accent-foreground hover:bg-green-600 rounded-xl"
         >
             Send Feedback
         </Button>
