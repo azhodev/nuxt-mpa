@@ -253,21 +253,21 @@
     position: absolute;
     bottom: -2px;
     /* Размер области скругления */
-    background: white;
+    background: var(--color-background);
     z-index: 2;
     /* Маска: прозрачный круг в углу */
-    mask: radial-gradient(circle at 0 100%, transparent 70%, white 70.1%);
+    mask: radial-gradient(circle at 0 100%, transparent 70%, var(--color-background) 70.1%);
     @apply lg:hidden w-15 h-15;
   }
 
   .hero-section::before {
     left: 0;
-    mask: radial-gradient(circle at 102% -5%, transparent 70%, white 72.1%);
+    mask: radial-gradient(circle at 102% -5%, transparent 70%, var(--color-background) 72.1%);
   }
 
   .hero-section::after {
     right: 0;
-    mask: radial-gradient(circle at 2% -5%, transparent 70%, white 72.1%);
+    mask: radial-gradient(circle at 2% -5%, transparent 70%, var(--color-background) 72.1%);
   }
 
   .fixed-header {
