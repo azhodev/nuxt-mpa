@@ -59,11 +59,11 @@ onMounted(() => {
     <div
       v-for="(item, index) in animatedStats"
       :key="index"
-      class="flex flex-col items-center odd:ml-20 even:mr-20 lg:odd:ml-0 lg:even:mr-0 transition-opacity duration-700"
-      :class="item.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
+      class="flex flex-col items-center odd:ml-20 even:mr-20 lg:odd:ml-0 lg:even:mr-0 transition-opacity duration-700 will-change-transform"
+      :class="item.isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'"
     >
       <div
-        class="text-9xl font-serif transition-all duration-300"
+        class="text-9xl font-serif transition-all duration-300 min-h-[130px]"
         :class="{ 'blur-xs scale-105': item.isAnimating }"
       >
         {{ item.current }}
