@@ -1,16 +1,74 @@
 <script setup lang="ts">
 import { STATS_DATA } from '~/data/stats'
+import { ref, onMounted } from 'vue'
+
+interface AnimatedStat {
+  target: number
+  current: number | string
+  description: string
+  isAnimating: boolean
+  isVisible: boolean
+}
+
+const animatedStats = ref<AnimatedStat[]>([])
+
+function getRandomTwoDigitNumber() {
+  return Math.floor(10 + Math.random() * 90)
+}
+
+function animateStat(stat: AnimatedStat, duration = 500, interval = 30) {
+  stat.isAnimating = true
+  const start = Date.now()
+
+  const animation = setInterval(() => {
+    const elapsed = Date.now() - start
+
+    if (elapsed >= duration) {
+      clearInterval(animation)
+      stat.current = stat.target
+      stat.isAnimating = false
+    } else {
+      stat.current = getRandomTwoDigitNumber()
+    }
+  }, interval)
+}
+
+
+onMounted(() => {
+  animatedStats.value = STATS_DATA.map(stat => ({
+    target: stat.value,
+    current: 0,
+    description: stat.description,
+    isAnimating: false,
+    isVisible: false,
+  }))
+
+  animatedStats.value.forEach((stat, index) => {
+    const delay = index * 300 // задержка для поочерёдного появления
+
+    setTimeout(() => {
+      stat.isVisible = true
+      animateStat(stat, 1000, 30)
+    }, delay)
+  })
+})
 </script>
 
 <template>
   <div class="flex flex-col lg:flex-row gap-6 lg:pl-4 xl:pl-12 text-center text-white border-l-divider">
     <div
-      v-for="(item, index) in STATS_DATA"
+      v-for="(item, index) in animatedStats"
       :key="index"
-      class="flex flex-col items-center odd:ml-20 even:mr-20 lg:odd:ml-0 lg:even:mr-0"
+      class="flex flex-col items-center odd:ml-20 even:mr-20 lg:odd:ml-0 lg:even:mr-0 transition-opacity duration-700"
+      :class="item.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
     >
-      <div class="text-9xl font-serif">{{ item.value }}</div>
-      <div class="text-2xl w-[220px]">{{ item.description }}</div>
+      <div
+        class="text-9xl font-serif transition-all duration-300"
+        :class="{ 'blur-xs scale-105': item.isAnimating }"
+      >
+        {{ item.current }}
+      </div>
+      <div class="text-2xl w-[220px] mt-2">{{ item.description }}</div>
     </div>
   </div>
 </template>

@@ -46,9 +46,9 @@ const contacts = [
           :contacts="contacts"
           class="flex-col gap-3"
         />
-        <FeedbackDrawer>
+        <ContactDrawer>
           <UiButton class="btn mt-3 text-md">contact us</UiButton>
-        </FeedbackDrawer>
+        </ContactDrawer>
       </div>
     </div>
   </div>

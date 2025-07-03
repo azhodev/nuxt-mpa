@@ -68,6 +68,7 @@ const onSubmit = form.handleSubmit((values) => {
                         type="text"
                         placeholder="John Doe"
                         v-bind="componentField"
+                        class="border border-accent"
                     />
                 </FormControl>
                 <FormDescription>
@@ -89,6 +90,7 @@ const onSubmit = form.handleSubmit((values) => {
                         type="email"
                         placeholder="you@example.com"
                         v-bind="componentField"
+                        class="border border-accent"
                     />
                 </FormControl>
                 <FormDescription>
@@ -110,8 +112,8 @@ const onSubmit = form.handleSubmit((values) => {
                         rows="3"
                         style="resize: none;"
                         placeholder="Your message here..."
-                        class="resize-none"
                         v-bind="componentField"
+                        class="border border-accent"
                     />
                 </FormControl>
                 <FormDescription>

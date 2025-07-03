@@ -35,9 +35,9 @@ const closeMenu = () => {
                         link-class="hover:scale-110 transition-transform duration-75"
                         @link-click="isOpen = false"
                     />
-                    <FeedbackDrawer>
+                    <ContactDrawer>
                         <WaweButton>Contact Us</WaweButton>
-                    </FeedbackDrawer>
+                    </ContactDrawer>
                 </div>
             </div>
         </Transition>

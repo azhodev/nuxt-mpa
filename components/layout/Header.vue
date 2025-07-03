@@ -63,9 +63,9 @@ watch(
                 class="hidden lg:flex gap-10 font-bold"
                 link-class="animate-underline leading-10"
             />
-            <FeedbackDrawer>
+            <ContactDrawer>
                 <UiButton class="btn hidden lg:flex px-5 py-1.5">contact us</UiButton>
-            </FeedbackDrawer>
+            </ContactDrawer>
             <!-- Mobile -->
             <div class="flex lg:hidden">
                 <MobileNav />
