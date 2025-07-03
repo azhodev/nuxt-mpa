@@ -48,7 +48,7 @@ onMounted(() => {
 
     setTimeout(() => {
       stat.isVisible = true
-      animateStat(stat, 1000, 30)
+      animateStat(stat, 500, 30)
     }, delay)
   })
 })
