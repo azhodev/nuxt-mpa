@@ -99,7 +99,7 @@ const onSubmit = form.handleSubmit((values) => {
                         rows="3"
                         style="resize: none;"
                         placeholder="Your message here..."
-                        class="resize-none overflow-y-scroll overflow-x-hidden"
+                        class="resize-none"
                         v-bind="componentField"
                     />
                 </FormControl>

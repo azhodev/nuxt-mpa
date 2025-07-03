@@ -16,7 +16,7 @@ import {
       <slot />
     </DrawerTrigger>
     <DrawerContent class="rounded-t-0">
-        <div class="mx-auto px-4 w-full max-w-xl min-h-[100vh] overflow-y-scroll">
+        <div class="mx-auto px-4 w-full max-w-xl min-h-[100vh]">
             <DrawerHeader>
               <DrawerTitle>Feedback</DrawerTitle>
               <DrawerDescription class="sr-only">

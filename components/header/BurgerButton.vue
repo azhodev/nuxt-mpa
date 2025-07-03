@@ -11,7 +11,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <button @click="toggleMenu" class="z-50 relative w-10 h-10">
+  <button aria-label="Toggle menu" @click="toggleMenu" class="z-50 relative w-10 h-10">
     <div class="relative w-full h-full">
       <!-- Line 1 -->
       <span
