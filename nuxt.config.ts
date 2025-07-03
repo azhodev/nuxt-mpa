@@ -33,9 +33,14 @@ export default defineNuxtConfig({
     },
 
     image: {
-        provider: 'ipx',
-        format: ['webp', 'avif'], // 👉 укажи нужные форматы
+        provider: 'netlify',
+        format: ['webp', 'avif'], // можно указать только 'webp' для надёжности
+        netlify: {
+            baseURL: '/', // важно — без этого может не находить src
+        },
     },
+
+    ssr: true,
 
     nitro: {
         compressPublicAssets: true, // ✅ вкл. сжатие public-ресурсов
