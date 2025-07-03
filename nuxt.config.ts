@@ -32,6 +32,11 @@ export default defineNuxtConfig({
         },
     },
 
+    image: {
+        provider: 'ipx',
+        format: ['webp'], // 👉 укажи нужные форматы
+    },
+
     nitro: {
         compressPublicAssets: true, // ✅ вкл. сжатие public-ресурсов
     },

@@ -3,7 +3,8 @@
         :to="to"
         class="relative pb-[70%] overflow-hidden rounded-[24px] flex flex-col hero-card"
     >
-        <NuxtImg
+        <NuxtPicture
+            format="avif,webp"
             :src="image"
             class="absolute top-0 left-0 w-full h-full object-cover"
             :alt="title"
@@ -33,3 +34,11 @@ defineProps<{
     to: string
 }>()
 </script>
+
+<style>
+picture>img {
+    border-radius: 16px;
+    object-fit: cover;
+    min-height: 100%;
+}
+</style>
