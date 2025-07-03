@@ -36,7 +36,9 @@ const contacts = [
             <div class="flex flex-col items-start gap-3">
                 <h3 class="font-bold">Contact</h3>
                 <ContactLinks :contacts="contacts" class="flex-col gap-3" />
-                <UiButton class="btn mt-3 text-2xl">contact us</UiButton>
+                <FeedbackDrawer>
+                  <UiButton class="btn mt-3 text-2xl">contact us</UiButton>
+                </FeedbackDrawer>
             </div>
         </div>
     </div>

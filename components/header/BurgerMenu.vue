@@ -40,7 +40,7 @@ const closeMenu = () => {
 <style scoped>
 .slide-enter-active,
 .slide-leave-active {
-    transition: transform .5s ease;
+    transition: transform .3s ease;
 }
 
 .slide-enter-from {

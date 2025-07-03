@@ -7,7 +7,9 @@
                 Agrofusion
             </h1>
             <!-- <UiButton class="btn bg-accent text-accent-foreground hover:bg-green-800 lowercase">Contact Us</UiButton> -->
-            <WaweButton>Contact Us</WaweButton>
+            <FeedbackDrawer>
+                <WaweButton>Contact Us</WaweButton>
+            </FeedbackDrawer>
         </div>
 
         <div class="relative border-border border-l-0 lg:border-l-1">

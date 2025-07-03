@@ -15,9 +15,11 @@
             At Agrofusion, we pride ourselves on our professionalism, flexibility, and commitment to reliability, ensuring
             that we meet the unique needs of each client and consistently deliver excellence in every transaction.
           </p>
-          <UiButton class="btn mt-4 bg-white text-green-800 px-4 py-2 rounded font-serif">
-            Let’s Get In Touch
-          </UiButton>
+          <FeedbackDrawer>
+            <UiButton class="btn mt-4 bg-white text-green-800 px-4 py-2 rounded font-serif">
+              Let’s Get In Touch
+            </UiButton>
+          </FeedbackDrawer>
         </div>
         <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden">
           <NuxtImg src="/bg-about-us.png" class="w-full" />

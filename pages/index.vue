@@ -33,8 +33,6 @@ const cards = [
 ]
 
 // TODO:
-// Заменить меню на бургер в кнопке хедера
-// Заменить dialog на кастомный компонент, который появляется с анимацией
 // Добавить Drawer для связи
 // Добавить Gsap для анимации появления числовых данных в hero, кнопки "contact us" 
 
@@ -63,7 +61,8 @@ const cards = [
             <h2>contact us</h2>
             <ContactGroupList
               :groups="contactGroups"
-              item-class="flex flex-col gap-3"
+              class="mt-5"
+              item-class="flex flex-col gap-3 border-l border-black/30 pl-5"
               link-wrapper-class="flex gap-4"
               link-class="flex gap-1 items-center text-lg"
               icon-class="w-6 h-6"

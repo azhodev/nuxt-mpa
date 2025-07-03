@@ -1,0 +1,111 @@
+<script setup lang="ts">
+import { useForm } from 'vee-validate'
+import { toTypedSchema } from '@vee-validate/zod'
+import * as z from 'zod'
+
+import { Button } from '@/components/ui/button'
+import {
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea' // если у тебя нет этого компонента, нужно его добавить
+
+// Валидация с Zod
+const formSchema = toTypedSchema(z.object({
+    name: z.string().min(2, "Name is too short").max(50),
+    email: z.string().email("Invalid email address"),
+    message: z.string().min(10, "Message must be at least 10 characters"),
+}))
+
+const form = useForm({
+    validationSchema: formSchema,
+})
+
+const onSubmit = form.handleSubmit((values) => {
+    console.log('Feedback submitted:', values)
+})
+</script>
+
+<template>
+    <form
+        @submit="onSubmit"
+        class="space-y-4"
+    >
+        <!-- Name -->
+        <FormField
+            v-slot="{ componentField }"
+            name="name"
+        >
+            <FormItem>
+                <FormLabel>Your Name</FormLabel>
+                <FormControl>
+                    <Input
+                        type="text"
+                        placeholder="John Doe"
+                        v-bind="componentField"
+                    />
+                </FormControl>
+                <FormDescription>
+                    Enter your full name.
+                </FormDescription>
+                <FormMessage />
+            </FormItem>
+        </FormField>
+
+        <!-- Email -->
+        <FormField
+            v-slot="{ componentField }"
+            name="email"
+        >
+            <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                    <Input
+                        type="email"
+                        placeholder="you@example.com"
+                        v-bind="componentField"
+                    />
+                </FormControl>
+                <FormDescription>
+                    We'll use this to contact you.
+                </FormDescription>
+                <FormMessage />
+            </FormItem>
+        </FormField>
+
+        <!-- Message -->
+        <FormField
+            v-slot="{ componentField }"
+            name="message"
+        >
+            <FormItem>
+                <FormLabel>Message</FormLabel>
+                <FormControl>
+                    <Textarea
+                        rows="4"
+                        placeholder="Your message here..."
+                        class="resize-none h-40 overflow-y-auto overflow-x-hidden"
+                        v-bind="componentField"
+                    />
+                </FormControl>
+                <FormDescription>
+                    Share your thoughts or feedback.
+                </FormDescription>
+                <FormMessage />
+            </FormItem>
+        </FormField>
+
+        <!-- Submit Button -->
+        <Button
+            type="submit"
+            class="btn bg-accent text-accent-foreground rounded-xl"
+        >
+            Send Feedback
+        </Button>
+    </form>
+</template>

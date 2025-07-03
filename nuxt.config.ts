@@ -13,6 +13,7 @@ export default defineNuxtConfig({
         "@nuxt/image",
         "@pinia/nuxt",
         "@nuxt/icon",
+        '@vee-validate/nuxt',
     ],
 
     vite: {
