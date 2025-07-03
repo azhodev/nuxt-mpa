@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 
     image: {
         provider: 'ipx',
-        format: ['webp'], // 👉 укажи нужные форматы
+        format: ['webp', 'avif'], // 👉 укажи нужные форматы
     },
 
     nitro: {

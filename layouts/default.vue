@@ -8,8 +8,8 @@ const { isHomePage } = useRouteInfo()
   <div class="relative flex flex-col min-h-screen">
     <LayoutHeader />
     <HeroSection :is-home-page="isHomePage" />
-    <div class="bg-background">
-      <NuxtPage class="bg-background flex-1" />
+    <div class="bg-background flex-1">
+      <NuxtPage class="bg-background" />
     </div>
     <LayoutFooter />
   </div>

@@ -4,10 +4,14 @@
         class="relative pb-[70%] overflow-hidden rounded-[24px] flex flex-col hero-card"
     >
         <NuxtPicture
-            format="avif,webp"
             :src="image"
             class="absolute top-0 left-0 w-full h-full object-cover"
-            :alt="title"
+            :imgAttrs="{
+                alt: title,
+                class: 'rounded-base object-cover h-full w-full',
+                style: 'display: block',
+                'data-my-data': 'my-value'
+            }"
         />
         <div
             class="absolute h-full p-5 flex flex-col items-start justify-between bg-black/40 text-secondary-foreground">
@@ -34,11 +38,3 @@ defineProps<{
     to: string
 }>()
 </script>
-
-<style>
-picture>img {
-    border-radius: 16px;
-    object-fit: cover;
-    min-height: 100%;
-}
-</style>
