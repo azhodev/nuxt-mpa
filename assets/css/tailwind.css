@@ -238,7 +238,7 @@
   }
 
   .hero-expanded {
-    @apply max-h-500 lg:max-h-[100vh] pb-30 lg:pb-0;
+    @apply max-h-500 lg:h-[100dvh] lg:max-h-[100dvh] pb-30 lg:pb-0;
   }
 
   .hero-section::before,
@@ -265,7 +265,10 @@
   }
 
   .fixed-header {
-    @apply translate-y-full;
+    @apply fixed translate-y-full;
+  }
+  .absolute-header {
+    @apply absolute translate-y-full;
   }
 
   .animate-underline {

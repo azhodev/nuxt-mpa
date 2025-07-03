@@ -10,23 +10,6 @@ const pageTitle = computed(() => {
   return current?.label || 'Page'
 })
 
-onMounted(() => {
-  const header = document.getElementById('layout-header')
-  const hero = document.getElementById('hero-section')
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (!entry.isIntersecting) {
-        header?.classList.add('fixed-header')
-      } else {
-        header?.classList.remove('fixed-header')
-      }
-    },
-    { threshold: 0.1 }
-  )
-
-  if (hero) observer.observe(hero)
-})
 </script>
 
 <template>
@@ -37,21 +20,18 @@ onMounted(() => {
   >
     <LayoutSiteVideo />
 
-    <div class="container h-full flex flex-col justify-center items-end text-secondary">
-      <div class="self-stretch flex flex-col">
-        <div v-if="routeInfo.isHomePage">
-          <HeroContent />
-          <HeroStats />
-        </div>
+    <div class="container h-full flex flex-col justify-center text-secondary">
+      <div v-if="routeInfo.isHomePage" class="self-stretch flex flex-col justify-between min-h-8/10">
+        <HeroContent />
+        <div class="flex-1 border-l-divider"></div>
+        <HeroStats />
+      </div>
 
-        <div v-else-if="!routeInfo.isHomePage">
-          <div class="flex justify-center">
-            <h1
-              class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] text-accent font-serif text-center">
-              {{ pageTitle }}
-            </h1>
-          </div>
-        </div>
+      <div v-else-if="!routeInfo.isHomePage" class="flex justify-center">
+        <h1
+          class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] text-accent font-serif text-center">
+          {{ pageTitle }}
+        </h1>
       </div>
     </div>
 

@@ -9,7 +9,6 @@ import {
     DialogDescription,
 } from "@/components/ui/dialog";
 
-import { MENU_DATA } from "~/data/menu";
 </script>
 
 <template>

@@ -3,7 +3,6 @@
         class="fixed top-0 w-full h-full object-cover -z-10"
         poster="/bg-poster.jpg"
         muted
-        loop
         playsinline
         autoplay
     >
