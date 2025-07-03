@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
     compatibilityDate: "2025-05-15",
     devtools: { enabled: false },
+
     modules: [
         "@nuxt/eslint",
         "shadcn-nuxt",
@@ -12,14 +13,17 @@ export default defineNuxtConfig({
         "@nuxt/image",
         "@pinia/nuxt",
     ],
+
     vite: {
         plugins: [tailwindcss()],
     },
     css: ["~/assets/css/tailwind.css"],
+
     shadcn: {
         prefix: "Ui",
         componentDir: "./components/ui",
     },
+
     googleFonts: {
         families: {
             Inter: [400, 600],
@@ -27,13 +31,19 @@ export default defineNuxtConfig({
         },
     },
 
+    app: {
+        pageTransition: { name: "page", mode: "out-in" },
+        head: {
+            title: "Agrofusion",
+            titleTemplate: "%s",
+            htmlAttrs: {
+                lang: "en",
+            },
+        },
+    },
+
     // app: {
     //     head: {
-    //         title: "Agrofusion",
-    //         titleTemplate: "%s | Agrofusion",
-    //         htmlAttrs: {
-    //             lang: "en",
-    //         },
     //         meta: [
     //             { charset: "utf-8" },
     //             { name: "viewport", content: "width=device-width, initial-scale=1" },

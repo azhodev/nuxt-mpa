@@ -70,7 +70,7 @@
   --text-9xl--line-height: 1;
   --breakpoint-xs: 30rem;
   --my-grid-cols: repeat(auto-fit, minmax(458px, 1fr));
-  --home-grid-cols: repeat(auto-fit, minmax(320px, 1fr));
+  --home-grid-cols: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 :root {

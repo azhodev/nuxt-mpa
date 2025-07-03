@@ -31,6 +31,13 @@ const cards = [
       "Agrofusion is committed to work with the highest ethical standards. Learn more about the deeply ingrained principles…"
   }
 ]
+
+// TODO:
+// Заменить меню на бургер в кнопке хедера
+// Заменить dialog на кастомный компонент, который появляется с анимацией
+// Добавить Drawer для связи
+// Добавить Gsap для анимации появления числовых данных в hero, кнопки "contact us" 
+
 </script>
 
 <template>
@@ -67,3 +74,4 @@ const cards = [
     </div>
   </div>
 </template>
+
