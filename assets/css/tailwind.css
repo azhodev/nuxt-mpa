@@ -70,6 +70,7 @@
   --text-9xl--line-height: 1;
   --breakpoint-xs: 30rem;
   --my-grid-cols: repeat(auto-fit, minmax(458px, 1fr));
+  --home-grid-cols: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 :root {
@@ -105,7 +106,7 @@
   /* Цвет действия удалить, ошибка */
   --destructive-foreground: oklch(0.577 0.245 27.325);
   /* Цвет текста на фоне destructive */
-  --border: rgba(248, 237, 217, 0.137);
+  --border: rgba(248, 237, 217, 0.092);
   /* Цвет границ элементов */
   --input: oklch(0.922 0 0);
   /* Цвет фона инпутов */
@@ -218,6 +219,11 @@
   .card {
     transition: transform .2s;
   }
+
+  .hero-card {
+    background: rgba(0, 0, 0, 0.40);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+  }
 }
 
 @layer utilities {
@@ -267,6 +273,7 @@
   .fixed-header {
     @apply fixed translate-y-full;
   }
+
   .absolute-header {
     @apply absolute translate-y-full;
   }

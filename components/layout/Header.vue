@@ -17,7 +17,7 @@ onMounted(() => {
                     if (!routeInfo.isHomePage) {
                         headerRef.value?.classList.remove("absolute-header");
                     }
-                }, 200);
+                }, 50);
             } else {
                 if (timeoutId) clearTimeout(timeoutId);
                 headerRef.value?.classList.remove("fixed-header");
