@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { features } from '~/data/missionFeatures';
 useHead({
-    title: 'Our Mission',
-    meta: [
-        {
-            name: 'description',
-            content: 'Discover Agrofusion’s mission and values in revolutionizing agriculture.'
-        }
-    ]
+  title: 'Our Mission',
+  meta: [
+    {
+      name: 'description',
+      content: 'Discover Agrofusion’s mission and values in revolutionizing agriculture.'
+    }
+  ]
 })
 </script>
 
@@ -30,14 +30,10 @@ useHead({
             </div>
 
             <div class="rounded-[12px] mt-10 lg:mt-0 overflow-hidden">
-                <NuxtPicture
+                <NuxtImg
                     alt="Grains in hands"
                     src="/mission-card-bg.png"
                     class="w-full h-full object-cover"
-                    :imgAttrs="{
-                        class: 'w-full h-full object-cover min-h-[368px]',
-                        style: 'display: block',
-                    }"
                 />
             </div>
         </div>

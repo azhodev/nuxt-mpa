@@ -38,7 +38,7 @@ let observer: IntersectionObserver | null = null
 
 onMounted(() => {
   animatedStats.value = STATS_DATA.map(stat => ({
-    target: Number(stat.value),
+    target: stat.value,
     current: 0,
     description: stat.description,
     isAnimating: false,

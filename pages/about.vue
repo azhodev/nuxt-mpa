@@ -1,6 +1,4 @@
 <script setup>
-import { NuxtPicture } from '#components';
-
 useHead({
   title: 'About Us',
   meta: [
@@ -38,8 +36,7 @@ useHead({
           </ContactDrawer>
         </div>
         <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden">
-          <NuxtPicture
-            format="avif,webp"
+          <NuxtImg
             src="/bg-about-us.png"
             class="w-full"
             alt="Factory Image"

@@ -3,15 +3,10 @@
         :to="to"
         class="relative pb-[70%] overflow-hidden rounded-[24px] flex flex-col hero-card"
     >
-        <NuxtPicture
+        <NuxtImg
             :src="image"
             class="absolute top-0 left-0 w-full h-full object-cover"
-            :imgAttrs="{
-                alt: title,
-                class: 'rounded-base object-cover h-full w-full',
-                style: 'display: block',
-                'data-my-data': 'my-value'
-            }"
+            :alt="title"
         />
         <div
             class="absolute h-full p-5 flex flex-col items-start justify-between bg-black/40 text-secondary-foreground">
