@@ -1,3 +1,15 @@
+<script setup>
+useHead({
+  title: 'About Us',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn more about Agrofusion, our values, our team, and our journey in modern agriculture.'
+    }
+  ]
+})
+</script>
+
 <template>
   <div>
     <div class="container py-22">

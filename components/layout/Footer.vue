@@ -47,7 +47,7 @@ const contacts = [
           class="flex-col gap-3"
         />
         <FeedbackDrawer>
-          <UiButton class="btn mt-3 text-2xl">contact us</UiButton>
+          <UiButton class="btn mt-3 text-md">contact us</UiButton>
         </FeedbackDrawer>
       </div>
     </div>

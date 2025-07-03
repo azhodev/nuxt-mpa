@@ -17,6 +17,15 @@ const offices = [
   }
 ]
 
+useHead({
+  title: 'Contacts',
+  meta: [
+    {
+      name: 'description',
+      content: 'Get in touch with Agrofusion. Find contact details and support information.'
+    }
+  ]
+})
 </script>
 
 <template>

@@ -40,39 +40,40 @@ export default defineNuxtConfig({
         pageTransition: { name: "page", mode: "out-in" },
         head: {
             title: "Agrofusion",
-            titleTemplate: "%s",
+            titleTemplate: '%s · Agrofusion',
             htmlAttrs: {
                 lang: "en",
             },
+            meta: [
+                // Базовые
+                { charset: "utf-8" },
+                { name: "viewport", content: "width=device-width, initial-scale=1" },
+                { name: "description", content: "Agrofusion is a modern agricultural solutions platform." },
+
+                // Цвет статус-бара, особенно на Android
+                { name: "theme-color", content: "#ffffff" },
+
+                // Open Graph — для Facebook, LinkedIn, Telegram
+                { property: "og:type", content: "website" },
+                { property: "og:site_name", content: "Agrofusion" },
+                { property: "og:title", content: "Agrofusion" }, // будет переопределяться через useHead
+                { property: "og:description", content: "Agrofusion is a modern agricultural solutions platform." },
+                { property: "og:image", content: "/preview.png" },
+                { property: "og:url", content: "https://yourdomain.com" },
+
+                // Twitter Cards
+                { name: "twitter:card", content: "summary_large_image" },
+                { name: "twitter:title", content: "Agrofusion" },
+                { name: "twitter:description", content: "Agrofusion is a modern agricultural solutions platform." },
+                { name: "twitter:image", content: "/preview.png" },
+            ],
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+                { rel: "icon", type: "image/png", href: "/favicon.png" },
+                { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+                { rel: "manifest", href: "/site.webmanifest" },
+            ],
         },
     },
 
-    // app: {
-    //     head: {
-    //         meta: [
-    //             { charset: "utf-8" },
-    //             { name: "viewport", content: "width=device-width, initial-scale=1" },
-    //             { name: "description", content: "A modern Nuxt 3 app with Tailwind, ShadCN and more." },
-    //             { name: "theme-color", content: "#ffffff" },
-
-    //             // Open Graph (для соцсетей)
-    //             { property: "og:title", content: "Agrofusion" },
-    //             { property: "og:description", content: "A modern Nuxt 3 app with Tailwind, ShadCN and more." },
-    //             { property: "og:type", content: "website" },
-    //             { property: "og:image", content: "/preview.png" },
-    //             { property: "og:url", content: "https://my-nuxt-app.com" },
-
-    //             // Twitter Card
-    //             { name: "twitter:card", content: "summary_large_image" },
-    //             { name: "twitter:title", content: "Agrofusion" },
-    //             { name: "twitter:description", content: "A modern Nuxt 3 app with Tailwind, ShadCN and more." },
-    //             { name: "twitter:image", content: "/preview.png" },
-    //         ],
-    //         link: [
-    //             { rel: "icon", type: "image/png", href: "/favicon.png" },
-    //             { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-    //             { rel: "manifest", href: "/site.webmanifest" },
-    //         ],
-    //     },
-    // },
 });

@@ -12,7 +12,7 @@ const pageTitle = computed(() => {
 <template>
   <div
     id="hero-section"
-    class="hero-section section-with-rounded-corners w-full bg-black/80 transition-[height] duration-500 ease-in-out relative overflow-hidden"
+    class="hero-section section-with-rounded-corners w-full transition-[height] duration-500 ease-in-out relative overflow-hidden"
     :class="routeInfo.isHomePage ? 'hero-expanded pt-30 lg:pt-0' : 'hero-collapsed pt-15'"
   >
     <LayoutSiteVideo />

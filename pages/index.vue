@@ -2,10 +2,17 @@
 import { contactGroups } from '~/data/contactGroups';
 import { cards } from '~/data/homeCards';
 
-const HomeCard = defineAsyncComponent(() => import('@/components/HomeCard.vue'))
 // TODO:
 // Добавить Gsap для анимации появления числовых данных в hero, кнопки "contact us" 
-
+useHead({
+  title: 'Home',
+  meta: [
+    {
+      name: 'description',
+      content: 'Welcome to Agrofusion – a modern agricultural solutions platform.'
+    }
+  ]
+})
 </script>
 
 <template>
