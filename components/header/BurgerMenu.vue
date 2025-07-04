@@ -24,12 +24,16 @@ const closeMenu = () => {
                     <!-- Кнопка закрытия -->
 
                     <HeaderBurgerButton color-class="btn bg-accent" />
-                    <NuxtImg
-                        src="/logo-black.png"
+                    <NuxtPicture
+                        src="/logo-black.webp"
                         width="183"
                         height="124"
                         alt="Logo Icon"
+                        format="avif,webp,jpg"
+                        sizes="sm:100vw md:50vw lg:800px"
+                        class="rounded-lg"
                     />
+
                     <Navigation
                         class="flex flex-col gap-2 py-7 px-0 lg:px-5"
                         link-class="hover:scale-110 transition-transform duration-75"

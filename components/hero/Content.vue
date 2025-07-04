@@ -13,12 +13,15 @@
         </div>
 
         <div class="relative border-border border-l-0 lg:border-l-1">
-            <NuxtImg
-                src="/logo.png"
+            <NuxtPicture
+                src="/logo.webp"
                 width="138"
                 class="absolute bottom-full hidden lg:block"
                 alt="Logo Icon"
+                format="avif,webp,jpg"
+                sizes="sm:100vw md:50vw lg:800px"
             />
+
             <Navigation
                 class="flex flex-col gap-2 py-7 px-0 lg:px-5"
                 link-class="hover:scale-110 transition-transform duration-75"

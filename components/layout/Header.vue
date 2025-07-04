@@ -50,13 +50,16 @@ watch(
     >
         <div class="container flex justify-between items-center">
             <NuxtLink to="/">
-                <NuxtImg
-                    src="/logo.png"
+                <NuxtPicture
+                    src="/logo.webp"
                     width="84px"
                     height="52"
                     class="my-1"
                     alt="Logo Icon"
+                    format="avif,webp,jpg,png"
+                    sizes="sm:100vw md:50vw lg:800px"
                 />
+
             </NuxtLink>
             <!-- Desktop -->
             <Navigation

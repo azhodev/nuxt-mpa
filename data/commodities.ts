@@ -1,7 +1,7 @@
 export const commodities = [
     {
         title: 'Corn',
-        image: '/commodities/1.png',
+        image: '/commodities/1.webp',
         specs: [
             'Moisture: max. 14.5 %',
             'Foreign matter: max. 2 %',
@@ -11,7 +11,7 @@ export const commodities = [
     },
     {
         title: 'Feed Wheat',
-        image: '/commodities/2.png',
+        image: '/commodities/2.webp',
         specs: [
             'Test weight: Min 72 Kg/hl',
             'Moisture: Max 14%',
@@ -23,7 +23,7 @@ export const commodities = [
     },
     {
         title: 'Milling Wheat',
-        image: '/commodities/3.png',
+        image: '/commodities/3.webp',
         specs: [
             'Test Weight 77 kg/hl min',
             'Moisture: 14% max',
@@ -37,7 +37,7 @@ export const commodities = [
     },
     {
         title: 'Barley',
-        image: '/commodities/4.png',
+        image: '/commodities/4.webp',
         specs: [
             'Test Weight: 62 kg/hl min',
             'Moisture: 14% max',
@@ -46,7 +46,7 @@ export const commodities = [
     },
     {
         title: 'Soy-beans',
-        image: '/commodities/5.png',
+        image: '/commodities/5.webp',
         specs: [
             'Moisture Max 13.0%',
             'Oil content Min 18.5%',
@@ -58,7 +58,7 @@ export const commodities = [
     },
     {
         title: 'Green / Yellow peas',
-        image: '/commodities/6.png',
+        image: '/commodities/6.webp',
         specs: [
             'Moisture 14% max',
             'Halves and broken: 8% max',
@@ -69,7 +69,7 @@ export const commodities = [
     },
     {
         title: 'Sun-flower Meal',
-        image: '/commodities/7.png',
+        image: '/commodities/7.webp',
         specs: [
             'Protein: 35% min',
             'Fibre: 20.0 % max',
@@ -79,7 +79,7 @@ export const commodities = [
     },
     {
         title: 'Wheat Flour',
-        image: '/commodities/8.png',
+        image: '/commodities/8.webp',
         specs: [
             'Moisture: max 14.6%',
             'Gluten on wet basis: Min 24%',
@@ -91,7 +91,7 @@ export const commodities = [
     },
     {
         title: 'Flax Seeds',
-        image: '/commodities/9.png',
+        image: '/commodities/9.webp',
         specs: [
             'Moisture: max 13%',
             'Foreign matters: Max 3%',
@@ -100,7 +100,7 @@ export const commodities = [
     },
     {
         title: 'Lentils',
-        image: '/commodities/10.png',
+        image: '/commodities/10.webp',
         specs: [
             'Moisture: max 15%',
             'Protein on dry: 21% min',
@@ -110,7 +110,7 @@ export const commodities = [
     },
     {
         title: 'Oats & Graid',
-        image: '/commodities/11.png',
+        image: '/commodities/11.webp',
         specs: [
             'Moisture: max 13.5 %',
             'Test weight: Min 520',
@@ -119,7 +119,7 @@ export const commodities = [
     },
     {
         title: 'Feed Oats',
-        image: '/commodities/12.png',
+        image: '/commodities/12.webp',
         specs: [
             'Moisture: max 13.5 %',
             'Test weight: Min 460',
@@ -128,7 +128,7 @@ export const commodities = [
     },
     {
         title: 'Milletе',
-        image: '/commodities/13.png',
+        image: '/commodities/13.webp',
         specs: [
             'Moisture: max 13.5 %',
             'Foreign matter: max 2 %',
@@ -136,7 +136,7 @@ export const commodities = [
     },
     {
         title: 'Sorg-hum',
-        image: '/commodities/14.png',
+        image: '/commodities/14.webp',
         specs: [
             'Moisture: max 14 %',
             'Foreign matter: max 5%',
@@ -144,7 +144,7 @@ export const commodities = [
     },
     {
         title: 'Soybean Meal',
-        image: '/commodities/15.png',
+        image: '/commodities/15.webp',
         specs: [
             'Protein: 46 % min',
             'Fibre: 6 % max',
@@ -155,7 +155,7 @@ export const commodities = [
     },
     {
         title: 'Sunflo-wer Oil',
-        image: '/commodities/16.png',
+        image: '/commodities/16.webp',
         specs: [
             'FFA: 2% max 3%',
             'Moisture and Impurities: max 0.5 %',
@@ -166,7 +166,7 @@ export const commodities = [
     },
     {
         title: 'Sunflo-wer Cake',
-        image: '/commodities/17.png',
+        image: '/commodities/17.webp',
         specs: [
             'Protein: 32% min',
             'Fibre: 21.0 % max',
@@ -176,7 +176,7 @@ export const commodities = [
     },
     {
         title: 'Soybean Cake',
-        image: '/commodities/18.png',
+        image: '/commodities/18.webp',
         specs: [
             'Protein: 44% mint',
             'Fibre: 5.5 % max',
@@ -186,7 +186,7 @@ export const commodities = [
     },
     {
         title: 'Crude Soybean Oil',
-        image: '/commodities/19.png',
+        image: '/commodities/19.webp',
         specs: [
             'Color (Lovibond cell 1 inch) 5 r and 50 y',
             'Free fatty acids (% as oleic) up to 1,25',

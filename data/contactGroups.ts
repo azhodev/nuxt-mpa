@@ -6,12 +6,12 @@ export const contactGroups = [
     contacts: [
       {
         href: 'https://t.me/avazmore',
-        icon: '/icons/telegram.png',
+        icon: '/icons/telegram.webp',
         label: 'Telegram',
       },
       {
         href: 'https://t.me/avazmore',
-        icon: '/icons/whatsapp.png',
+        icon: '/icons/whatsapp.webp',
         label: 'Whatsapp',
       },
     ],
@@ -21,7 +21,7 @@ export const contactGroups = [
     contacts: [
       {
         href: 'https://t.me/avazmore',
-        icon: '/icons/whatsapp.png',
+        icon: '/icons/whatsapp.webp',
         label: 'Whatsapp',
       },
     ],

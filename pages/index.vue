@@ -30,11 +30,20 @@ useHead({
           />
         </div>
         <div class="xs:basis-[400px] min-h-[636px] relative rounded-[24px] overflow-hidden">
-          <NuxtImg
+          <NuxtPicture
             alt="The Catcher in the Rye"
-            src="/cards/5.jpg"
+            src="/cards/5.webp"
             class="absolute top-0 left-0 w-full h-full object-cover"
+            format="avif,webp,jpg"
+            width="800"
+            height="600"
+            sizes="sm:100vw md:50vw lg:800px"
+            :imgAttrs="{
+              class: 'h-full w-full object-cover',
+              style: 'display: block',
+            }"
           />
+
           <div class="absolute p-9">
             <h2>contact us</h2>
             <ContactGroupList

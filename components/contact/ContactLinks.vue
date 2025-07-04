@@ -22,13 +22,16 @@ defineProps<{
       target="_blank"
       rel="noopener"
     >
-      <NuxtImg
+      <NuxtPicture
         :src="item.icon"
         :class="iconClass ?? 'w-6 h-6'"
         width="24"
         height="24"
         alt=""
+        format="avif,webp,jpg"
+        sizes="sm:100vw md:50vw lg:800px"
       />
+
       <span :class="labelClass">{{ item.label }}</span>
     </a>
   </div>

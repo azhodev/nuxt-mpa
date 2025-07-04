@@ -1,10 +1,14 @@
 <template>
   <NuxtLink class="flex flex-col gap-3">
     <div class="w-full h-[298px] overflow-hidden rounded-xl">
-      <NuxtImg
+      <NuxtPicture
         :src="item.image"
         class="w-full h-full object-cover"
         :alt="item.title"
+        format="avif,webp,jpg,png"
+        width="800"
+        height="600"
+        sizes="sm:100vw md:50vw lg:800px"
       />
     </div>
     <div class="flex justify-between gap-3">

@@ -4,17 +4,17 @@ import ContactsLinks from '../contact/ContactLinks.vue';
 const contacts = [
   {
     href: 'https://maps.app.goo.gl/mpgCeMgPmyRobu726',
-    icon: '/icons/map.png',
+    icon: '/icons/map.webp',
     label: 'Dubai Head office',
   },
   {
     href: 'https://t.me/avazmore',
-    icon: '/icons/telegram.png',
+    icon: '/icons/telegram.webp',
     label: 'Telegram',
   },
   {
     href: 'https://t.me/avazmore',
-    icon: '/icons/whatsapp.png',
+    icon: '/icons/whatsapp.webp',
     label: 'Watsapp',
   },
 ]
@@ -27,12 +27,16 @@ const contacts = [
         to="/"
         class="row-span-2 md:row-span-1"
       >
-        <NuxtImg
-          src="/logo.png"
+        <NuxtPicture
+          src="/logo.webp"
           width="138"
           height="86"
           alt="Logo Icon"
+          format="avif,webp,jpg,png"
+          sizes="sm:100vw md:50vw lg:800px"
+          class="rounded-lg"
         />
+
       </NuxtLink>
 
       <Navigation

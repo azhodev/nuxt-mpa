@@ -36,10 +36,18 @@ useHead({
           </ContactDrawer>
         </div>
         <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden">
-          <NuxtImg
+          <NuxtPicture
             src="/bg-about-us.png"
             class="w-full"
             alt="Factory Image"
+            format="avif,webp,jpg,png"
+            width="800"
+            height="600"
+            sizes="sm:100vw md:50vw lg:800px"
+            :imgAttrs="{
+              class: 'h-full w-full object-cover',
+              style: 'display: block',
+            }"
           />
         </div>
       </section>
