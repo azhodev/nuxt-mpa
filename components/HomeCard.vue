@@ -8,12 +8,13 @@
             class="absolute top-0 left-0 w-full h-full object-cover"
             :alt="title"
             format="avif,webp,jpg,png"
-            width="800"
-            height="600"
-            sizes="sm:100vw md:50vw lg:800px"
+            sizes="(max-width: 640px) 100vw, 400px"
+            width="400"
+            height="260"
+            loading="lazy"
             :imgAttrs="{
-              class: 'h-full w-full object-cover',
-              style: 'display: block',
+                class: 'h-full w-full object-cover',
+                style: 'display: block',
             }"
         />
 
