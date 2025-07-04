@@ -9,6 +9,7 @@
         width="800"
         height="600"
         sizes="sm:100vw md:50vw lg:800px"
+        loading="lazy"
       />
     </div>
     <div class="flex justify-between gap-3">

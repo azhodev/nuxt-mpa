@@ -5,10 +5,11 @@
     >
         <NuxtPicture
             :src="image"
-            class="absolute top-0 left-0 w-full h-full object-cover"
+            class="absolute top-0 left-0 max-w-[600px] md:max-w-[530px] w-full h-full object-cover"
             :alt="title"
             format="avif,webp,jpg,png"
             sizes="(max-width: 640px) 100vw, 400px"
+            quality="60"
             width="400"
             height="260"
             loading="lazy"

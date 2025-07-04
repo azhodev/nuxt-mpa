@@ -1,7 +1,7 @@
 <template>
     <video
         class="fixed top-0 w-full h-full object-cover object-[center_top] -z-10"
-        poster="/bg-poster.webp"
+        poster="/bg-poster-compressed.webp"
         muted
         playsinline
         autoplay

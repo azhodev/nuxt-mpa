@@ -9,7 +9,7 @@ const routeInfo = useRouteInfo()
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-
+  
   <Toaster />
 </template>
 
