@@ -2,8 +2,6 @@
 import { contactGroups } from '~/data/contactGroups';
 import { cards } from '~/data/homeCards';
 
-// TODO:
-// Добавить Gsap для анимации появления числовых данных в hero, кнопки "contact us" 
 useHead({
   title: 'Home',
   meta: [
@@ -16,7 +14,7 @@ useHead({
 </script>
 
 <template>
-  <div class="py-15">
+  <div class="py-8 xs:py-15">
     <div class="container">
       <div class="flex gap-4 xs:gap-5 flex-col xl:flex-row">
         <div class="flex-1 grid xs:grid-cols-(--home-grid-cols) gap-x-4 gap-y-4">
@@ -44,8 +42,8 @@ useHead({
             }"
           />
 
-          <div class="absolute p-9">
-            <h2>contact us</h2>
+          <div class="absolute p-2 xs:p-9 w-full">
+            <h2 class="text-center xs:text-left">contact us</h2>
             <ContactGroupList
               :groups="contactGroups"
               class="mt-5"

@@ -12,7 +12,7 @@ useHead({
 
 <template>
   <div>
-    <div class="container py-22">
+    <div class="container py-8 xs:py-22">
       <section class="relative flex flex-col gap-5">
         <div class="lg:absolute bg-secondary text-secondary-foreground py-10 px-8 max-w-150 w-full rounded-[12px]">
           <h2 class="mb-4 text-secondary-foreground">About Us</h2>

@@ -25,7 +25,7 @@ defineProps<{
       :key="index"
       :class="itemClass ?? 'flex flex-col gap-3'"
     >
-      <h3 :class="nameClass ?? 'font-normal w-[258px]'">{{ group.name }}</h3>
+      <h3 :class="nameClass ?? 'font-normal w-full xs:w-[258px]'">{{ group.name }}</h3>
       <ContactLinks
         :contacts="group.contacts"
         :wrapper-class="linkWrapperClass ?? 'flex flex-col gap-2'"
