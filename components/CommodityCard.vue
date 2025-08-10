@@ -16,7 +16,7 @@ const skeletonWidthClasses = [
 ]
 
 // Задержка перед показом контента (например, 500 мс)
-const LOADING_DELAY = 500
+const LOADING_DELAY = 800
 
 onMounted(() => {
   setTimeout(() => {

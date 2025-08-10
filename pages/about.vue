@@ -1,4 +1,7 @@
 <script setup>
+import { Skeleton } from '@/components/ui/skeleton'
+import { ref, onMounted } from 'vue'
+
 useHead({
   title: 'About Us',
   meta: [
@@ -7,6 +10,15 @@ useHead({
       content: 'Learn more about Agrofusion, our values, our team, and our journey in modern agriculture.'
     }
   ]
+})
+
+const imageLoaded = ref(false)
+const LOADING_DELAY = 500 // Задержка в миллисекундах
+
+onMounted(() => {
+  setTimeout(() => {
+    imageLoaded.value = true
+  }, LOADING_DELAY)
 })
 </script>
 
@@ -37,6 +49,7 @@ useHead({
         </div>
         <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden">
           <NuxtPicture
+            v-if="imageLoaded"
             src="/bg-about-us.png"
             class="w-full"
             alt="Factory Image"
@@ -44,13 +57,24 @@ useHead({
             width="800"
             height="600"
             sizes="sm:100vw md:50vw lg:800px"
-            :imgAttrs="{
+            :img-attrs="{
               class: 'h-full w-full object-cover',
               style: 'display: block',
             }"
           />
+          <Skeleton v-else class="w-full h-[800px] bg-gray-200 dark:bg-gray-800" />
         </div>
       </section>
     </div>
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: all .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  filter: blur(3px);
+}
+</style>

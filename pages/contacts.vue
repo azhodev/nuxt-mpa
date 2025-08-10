@@ -11,7 +11,7 @@ const mapIframe = ref(null)
 onMounted(() => {
   setTimeout(() => {
     isMapLoaded.value = true
-  }, 800)
+  }, 1200)
 })
 
 const offices = [
