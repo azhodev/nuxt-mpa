@@ -48,20 +48,24 @@ onMounted(() => {
           </ContactDrawer>
         </div>
         <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden">
-          <NuxtPicture
-            v-if="imageLoaded"
-            src="/bg-about-us.png"
-            class="w-full"
-            alt="Factory Image"
-            format="avif,webp,jpg,png"
-            width="800"
-            height="600"
-            sizes="sm:100vw md:50vw lg:800px"
-            :img-attrs="{
-              class: 'h-full w-full object-cover',
-              style: 'display: block',
-            }"
-          />
+          <template  v-if="imageLoaded">
+            <transition name="fade">
+              <NuxtPicture
+                v-if="imageLoaded"
+                src="/bg-about-us.png"
+                class="w-full"
+                alt="Factory Image"
+                format="avif,webp,jpg,png"
+                width="800"
+                height="600"
+                sizes="sm:100vw md:50vw lg:800px"
+                :img-attrs="{
+                  class: 'h-full w-full object-cover',
+                  style: 'display: block',
+                }"
+              />
+            </transition>
+          </template>
           <Skeleton v-else class="w-full h-[800px] bg-gray-200 dark:bg-gray-800" />
         </div>
       </section>
