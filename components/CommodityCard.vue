@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { Skeleton } from '@/components/ui/skeleton'
-import { useImageLoaded } from '@/composables/useImageLoaded'
+import { ref, onMounted } from 'vue'
 
-const props = defineProps<{ item: { title: string; image: string; specs: string[] } }>()
+defineProps<{ item: { title: string; image: string; specs: string[] } }>()
 
-const { loaded } = useImageLoaded(props.item.image)
+const showContent = ref(false)
 
 // Генерация случайных ширин для скелетонов
 const skeletonWidthClasses = [
@@ -14,10 +14,22 @@ const skeletonWidthClasses = [
   'w-4/5',
   'w-5/6'
 ]
+
+// Задержка перед показом контента (например, 500 мс)
+const LOADING_DELAY = 500
+
+onMounted(() => {
+  setTimeout(() => {
+    showContent.value = true
+  }, LOADING_DELAY)
+})
 </script>
 
 <template>
-  <NuxtLink v-if="loaded" class="flex flex-col gap-3">
+  <NuxtLink
+    v-if="showContent"
+    class="flex flex-col gap-3"
+  >
     <!-- Изображение -->
     <div class="w-full h-[298px] overflow-hidden rounded-xl">
       <NuxtPicture
@@ -49,16 +61,19 @@ const skeletonWidthClasses = [
   </NuxtLink>
 
   <!-- Скелетон -->
-  <div v-else class="flex flex-col gap-3">
-    <Skeleton class="bg-gray-300 w-full h-[298px] rounded-xl" />
+  <div
+    v-else
+    class="flex flex-col gap-3"
+  >
+    <Skeleton class="bg-gray-200 dark:bg-gray-800 w-full h-[298px] rounded-xl" />
 
     <div class="flex justify-between gap-3">
-      <Skeleton class="bg-gray-300 h-8 w-1/2" />
-      <div class=" py-6 px-5.5 rounded-xl xs:max-w-[300px] w-full">
-        <Skeleton 
+      <Skeleton class="bg-gray-200 dark:bg-gray-800 h-8 w-1/2" />
+      <div class="py-6 px-5.5 rounded-xl xs:max-w-[300px] w-full">
+        <Skeleton
           v-for="(spec, i) in item.specs"
           :key="i"
-          class="bg-gray-300 h-4 mb-2"
+          class="bg-gray-200 dark:bg-gray-800 h-4 mb-2"
           :class="skeletonWidthClasses[i % skeletonWidthClasses.length]"
         />
       </div>
