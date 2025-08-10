@@ -1,4 +1,4 @@
-// data/contactGroups.ts
+// data/contact-groups.ts
 
 export const contactGroups = [
   {

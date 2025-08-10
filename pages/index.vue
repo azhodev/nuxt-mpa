@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { contactGroups } from '~/data/contactGroups';
-import { cards } from '~/data/homeCards';
+import { contactGroups } from '~/data/contact-groups';
+import { cards } from '~/data/home-cards';
 
 useHead({
   title: 'Home',

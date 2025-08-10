@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ContactForm from '@/components/contact/ContactForm.vue';
+import ContactForm from '~/components/ContactForm.vue';
 import {
   Drawer,
   DrawerContent,

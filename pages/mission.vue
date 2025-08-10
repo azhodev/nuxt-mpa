@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { features } from '~/data/missionFeatures';
+import { features } from '~/data/mission-features';
 useHead({
     title: 'Our Mission',
     meta: [

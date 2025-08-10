@@ -1,5 +1,5 @@
 <script setup>
-import { contactGroups } from '~/data/contactGroups'
+import { contactGroups } from '~/data/contact-groups'
 import { Skeleton } from '@/components/ui/skeleton'
 import { ref, onMounted } from 'vue'
 
