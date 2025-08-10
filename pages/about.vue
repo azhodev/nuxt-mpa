@@ -13,7 +13,7 @@ useHead({
 })
 
 const imageLoaded = ref(false)
-const LOADING_DELAY = 500 // Задержка в миллисекундах
+const LOADING_DELAY = 600 // Задержка в миллисекундах
 
 onMounted(() => {
   setTimeout(() => {
