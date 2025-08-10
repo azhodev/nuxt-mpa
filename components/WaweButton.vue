@@ -14,6 +14,8 @@
 <style scoped>
 /* Основные стили */
 .wave-btn {
+	cursor: pointer;
+	
 	width: 127px;
 	height: 36px;
 	display: -webkit-flex;
