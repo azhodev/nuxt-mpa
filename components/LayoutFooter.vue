@@ -1,5 +1,4 @@
 <script setup>
-import ContactsLinks from '../ContactLinks.vue';
 
 const contacts = [
   {
