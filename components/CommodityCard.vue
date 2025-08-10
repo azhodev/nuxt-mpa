@@ -7,13 +7,13 @@ const props = defineProps<{ item: { title: string; image: string; specs: string[
 const { loaded } = useImageLoaded(props.item.image)
 
 // Генерация случайных ширин для скелетонов
-const skeletonWidths = props.item.specs.map(() => {
-  // например, ширина от 50% до 90%
-  const min = 50
-  const max = 90
-  const randomWidth = Math.floor(Math.random() * (max - min + 1)) + min
-  return `${randomWidth}%`
-})
+const skeletonWidthClasses = [
+  'w-1/2',
+  'w-2/3',
+  'w-3/4',
+  'w-4/5',
+  'w-5/6'
+]
 </script>
 
 <template>
@@ -54,12 +54,12 @@ const skeletonWidths = props.item.specs.map(() => {
 
     <div class="flex justify-between gap-3">
       <Skeleton class="bg-gray-300 h-8 w-1/2" />
-      <div class="py-6 px-5.5 rounded-xl xs:max-w-[300px] w-full">
+      <div class=" py-6 px-5.5 rounded-xl xs:max-w-[300px] w-full">
         <Skeleton 
           v-for="(spec, i) in item.specs"
           :key="i"
           class="bg-gray-300 h-4 mb-2"
-          :style="{ width: skeletonWidths[i] }"
+          :class="skeletonWidthClasses[i % skeletonWidthClasses.length]"
         />
       </div>
     </div>
