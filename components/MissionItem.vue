@@ -8,7 +8,7 @@
         :alt="title"
       />
     </span>
-    <div class="flex flex-col gap-4">
+    <div class="self-center flex flex-col gap-4">
       <h3 class="font-serif text-[28px] font-normal">{{ title }}</h3>
       <p class="text-base/5 max-w-[365px]">{{ description }}</p>
     </div>

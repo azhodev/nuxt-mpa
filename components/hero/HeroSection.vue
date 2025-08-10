@@ -15,7 +15,7 @@ const pageTitle = computed(() => {
     class="hero-section section-with-rounded-corners w-full transition-[height] duration-500 ease-in-out relative overflow-hidden"
     :class="routeInfo.isHomePage ? 'hero-expanded pt-30 lg:pt-0' : 'hero-collapsed pt-15'"
   >
-    <LayoutSiteVideo />
+    <HeroVideo />
 
     <div class="container h-full flex flex-col justify-center text-secondary">
       <div v-if="routeInfo.isHomePage" class="self-stretch flex flex-col justify-between min-h-8/10">

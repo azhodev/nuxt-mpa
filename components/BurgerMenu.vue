@@ -23,7 +23,7 @@ const closeMenu = () => {
                 <div class="w-[90vw] max-w-[450px] bg-popover text-popover-foreground h-full p-6 flex flex-col">
                     <!-- Кнопка закрытия -->
 
-                    <HeaderBurgerButton color-class="btn bg-accent" />
+                    <BurgerButton color-class="btn bg-accent" />
                     <NuxtPicture
                         src="/logo-black.webp"
                         width="183"

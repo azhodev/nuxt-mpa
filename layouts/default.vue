@@ -1,6 +1,6 @@
 <script setup>
-const LayoutFooter = defineAsyncComponent(() => import('~/components/layout/Footer.vue'))
-const LayoutHeader = defineAsyncComponent(() => import('~/components/layout/Header.vue'))
+const LayoutFooter = defineAsyncComponent(() => import('~/components/layout/LayoutFooter.vue'))
+const LayoutHeader = defineAsyncComponent(() => import('~/components/layout/LayoutHeader.vue'))
 const { isHomePage } = useRouteInfo()
 </script>
 

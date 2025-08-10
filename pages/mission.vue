@@ -22,7 +22,7 @@ useHead({
             </div>
 
             <div class="flex flex-col justify-between gap-12 row-span-2">
-                <FeatureItem
+                <MissionItem
                     v-for="(feature, index) in features"
                     :key="index"
                     v-bind="feature"
@@ -33,12 +33,12 @@ useHead({
                 <NuxtPicture
                     alt="Grains in hands"
                     src="/mission-card-bg.png"
-                    class="w-full h-full object-cover"
+                    class="object-cover transition-transform duration-500 ease-out hover:scale-110"
                     format="avif,webp,jpg,png"
                     width="855"
                     height="421"
                     sizes="sm:100vw md:50vw lg:800px"
-                    :imgAttrs="{
+                    :img-attrs="{
                         class: 'h-full w-full object-cover',
                         style: 'display: block',
                     }"

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from "vue";
-import MobileNav from "~/components/navigation/MobileNav";
 
 const routeInfo = useRouteInfo();
 const headerRef = ref<HTMLElement | null>(null);
@@ -71,7 +70,7 @@ watch(
             </ContactDrawer>
             <!-- Mobile -->
             <div class="flex lg:hidden">
-                <MobileNav />
+                <NavigationMobile />
             </div>
         </div>
     </div>
