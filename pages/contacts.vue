@@ -74,7 +74,7 @@ useHead({
       <div class="flex-1 px-9 flex flex-col gap-13">
         <section class="flex flex-col gap-5">
           <h2>Contacts</h2>
-          <ContactGroupList
+          <ContactLists
             :groups="contactGroups"
             item-class="flex flex-col gap-3"
             link-wrapper-class="flex gap-4"

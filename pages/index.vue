@@ -45,7 +45,7 @@ useHead({
 
           <div class="absolute p-2 xs:p-9 w-full">
             <h2 class="text-center xs:text-left">contact us</h2>
-            <ContactGroupList
+            <ContactLists
               :groups="contactGroups"
               class="mt-5"
               item-class="flex flex-col gap-3 border-l border-black/30 pl-5"
