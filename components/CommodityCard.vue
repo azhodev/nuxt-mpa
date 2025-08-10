@@ -31,7 +31,7 @@ onMounted(() => {
     class="flex flex-col gap-3"
   >
     <!-- Изображение -->
-    <div class="w-full h-[298px] overflow-hidden rounded-xl">
+    <div class="w-full sm:h-[298px] overflow-hidden rounded-xl">
       <NuxtPicture
         :src="item.image"
         class="w-full h-full object-cover"

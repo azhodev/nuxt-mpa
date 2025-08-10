@@ -71,6 +71,10 @@
   --breakpoint-xs: 30rem;
   --my-grid-cols: repeat(auto-fit, minmax(458px, 1fr));
   --home-grid-cols: repeat(auto-fit, minmax(350px, 1fr));
+
+  --breakpoint-xl: 60rem;
+  --breakpoint-2xl: 70rem;
+  --breakpoint-3xl: 80rem;
 }
 
 :root {
