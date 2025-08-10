@@ -1,6 +1,7 @@
 <script setup>
 import { Skeleton } from '@/components/ui/skeleton'
 import { ref, onMounted } from 'vue'
+import TiltParagraph from '@/components/ui/TiltParagraph.vue'
 
 useHead({
   title: 'About Us',
@@ -28,7 +29,10 @@ onMounted(() => {
       <section class="relative flex flex-col gap-5">
         <div class="lg:absolute bg-secondary text-secondary-foreground py-10 px-8 max-w-150 w-full rounded-[12px]">
           <h2 class="mb-4 text-secondary-foreground">About Us</h2>
-          <p class="leading-relaxed text-sm sm:text-base">
+          <TiltParagraph 
+            customClass="leading-relaxed text-sm sm:text-base"
+            :tiltIntensity="7"
+          >
             Headquartered in Ukraine with offices in major agricultural hubs, Agrofusion is a dynamic, medium-sized
             organization dedicated to delivering customized solutions to our long-standing international clients. We
             offer
@@ -40,7 +44,7 @@ onMounted(() => {
             At Agrofusion, we pride ourselves on our professionalism, flexibility, and commitment to reliability,
             ensuring
             that we meet the unique needs of each client and consistently deliver excellence in every transaction.
-          </p>
+          </TiltParagraph>
           <ContactDrawer>
             <UiButton class="btn mt-4 bg-white text-green-800 px-4 py-2 rounded font-serif">
               Let’s Get In Touch
