@@ -33,13 +33,12 @@ useHead({
                 <NuxtPicture
                     alt="Grains in hands"
                     src="/mission-card-bg.png"
-                    class="object-cover transition-transform duration-500 ease-out hover:scale-110"
                     format="avif,webp,jpg,png"
                     width="855"
                     height="421"
                     sizes="sm:100vw md:50vw lg:800px"
                     :img-attrs="{
-                        class: 'h-full w-full object-cover',
+                        class: 'h-full w-full object-cover transition-transform duration-500 ease-out hover:scale-110',
                         style: 'display: block',
                     }"
                 />
