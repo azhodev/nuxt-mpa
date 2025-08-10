@@ -65,15 +65,15 @@ onMounted(() => {
     v-else
     class="flex flex-col gap-3"
   >
-    <Skeleton class="bg-gray-200 dark:bg-gray-800 w-full h-[298px] rounded-xl" />
+    <Skeleton class="bg-gray-300 dark:bg-gray-800 w-full h-[298px] rounded-xl" />
 
     <div class="flex justify-between gap-3">
-      <Skeleton class="bg-gray-200 dark:bg-gray-800 h-8 w-1/2" />
+      <Skeleton class="bg-gray-300 dark:bg-gray-800 h-8 w-1/2" />
       <div class="py-6 px-5.5 rounded-xl xs:max-w-[300px] w-full">
         <Skeleton
           v-for="(spec, i) in item.specs"
           :key="i"
-          class="bg-gray-200 dark:bg-gray-800 h-4 mb-2"
+          class="bg-gray-300 dark:bg-gray-800 h-4 mb-2"
           :class="skeletonWidthClasses[i % skeletonWidthClasses.length]"
         />
       </div>

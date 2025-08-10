@@ -30,8 +30,8 @@ onMounted(() => {
         <div class="lg:absolute bg-secondary text-secondary-foreground py-10 px-8 max-w-150 w-full rounded-[12px]">
           <h2 class="mb-4 text-secondary-foreground">About Us</h2>
           <TiltParagraph 
-            customClass="leading-relaxed text-sm sm:text-base"
-            :tiltIntensity="7"
+            custom-class="leading-relaxed text-sm sm:text-base"
+            :tilt-intensity="7"
           >
             Headquartered in Ukraine with offices in major agricultural hubs, Agrofusion is a dynamic, medium-sized
             organization dedicated to delivering customized solutions to our long-standing international clients. We
@@ -70,7 +70,7 @@ onMounted(() => {
               />
             </transition>
           </template>
-          <Skeleton v-else class="w-full h-[800px] bg-gray-200 dark:bg-gray-800" />
+          <Skeleton v-else class="w-full h-[800px] bg-gray-300 dark:bg-gray-800" />
         </div>
       </section>
     </div>

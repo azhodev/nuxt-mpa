@@ -55,7 +55,7 @@ useHead({
         <div class="mt-10 relative">
           <Skeleton
             v-if="!isMapLoaded"
-            class="bg-gray-200 dark:bg-gray-800 w-full h-[450px] rounded-[4px] animate-pulse"
+            class="bg-gray-300 dark:bg-gray-800 w-full h-[450px] rounded-[4px] animate-pulse"
           />
 
           <iframe

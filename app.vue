@@ -1,15 +1,14 @@
 <script setup>
 import { Toaster } from '@/components/ui/sonner'
-import 'vue-sonner/style.css' 
+import 'vue-sonner/style.css'
 
-const routeInfo = useRouteInfo()
 </script>
 
 <template>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-  
+
   <Toaster />
 </template>
 
@@ -18,6 +17,7 @@ const routeInfo = useRouteInfo()
 .page-leave-active {
   transition: all 0.4s;
 }
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0;

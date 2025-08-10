@@ -1,8 +1,7 @@
-<!-- components/navigation/navigation.vue -->
 <script setup>
 import { MENU_DATA } from "~/data/menu";
 
-const props = defineProps({
+defineProps({
     wrapperClass: { type: String, default: "" },
     linkClass: { type: String, default: "" },
 });
