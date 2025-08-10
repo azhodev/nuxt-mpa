@@ -1,5 +1,24 @@
+<script setup lang="ts">
+import { Skeleton } from '@/components/ui/skeleton'
+import { useImageLoaded } from '@/composables/useImageLoaded'
+
+const props = defineProps<{ item: { title: string; image: string; specs: string[] } }>()
+
+const { loaded } = useImageLoaded(props.item.image)
+
+// Генерация случайных ширин для скелетонов
+const skeletonWidths = props.item.specs.map(() => {
+  // например, ширина от 50% до 90%
+  const min = 50
+  const max = 90
+  const randomWidth = Math.floor(Math.random() * (max - min + 1)) + min
+  return `${randomWidth}%`
+})
+</script>
+
 <template>
-  <NuxtLink class="flex flex-col gap-3">
+  <NuxtLink v-if="loaded" class="flex flex-col gap-3">
+    <!-- Изображение -->
     <div class="w-full h-[298px] overflow-hidden rounded-xl">
       <NuxtPicture
         :src="item.image"
@@ -12,6 +31,8 @@
         loading="lazy"
       />
     </div>
+
+    <!-- Заголовок и спецификации -->
     <div class="flex justify-between gap-3">
       <h2 class="text-3xl">{{ item.title }}</h2>
       <div
@@ -26,14 +47,21 @@
       </div>
     </div>
   </NuxtLink>
-</template>
 
-<script setup lang="ts">
-defineProps<{
-  item: {
-    title: string
-    image: string
-    specs: string[]
-  }
-}>()
-</script>
+  <!-- Скелетон -->
+  <div v-else class="flex flex-col gap-3">
+    <Skeleton class="bg-gray-300 w-full h-[298px] rounded-xl" />
+
+    <div class="flex justify-between gap-3">
+      <Skeleton class="bg-gray-300 h-8 w-1/2" />
+      <div class="py-6 px-5.5 rounded-xl xs:max-w-[300px] w-full">
+        <Skeleton 
+          v-for="(spec, i) in item.specs"
+          :key="i"
+          class="bg-gray-300 h-4 mb-2"
+          :style="{ width: skeletonWidths[i] }"
+        />
+      </div>
+    </div>
+  </div>
+</template>
