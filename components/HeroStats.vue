@@ -3,6 +3,7 @@ import { STATS_DATA } from '~/data/stats'
 import type { AnimatedStat } from '~/types/stats'
 
 const animatedStats = ref<AnimatedStat[]>([])
+let observer: IntersectionObserver | null = null
 
 function getRandomTwoDigitNumber() {
   return Math.floor(10 + Math.random() * 90)
@@ -24,8 +25,6 @@ function animateStat(stat: AnimatedStat, duration = 500, interval = 30) {
     }
   }, interval)
 }
-
-let observer: IntersectionObserver | null = null
 
 onMounted(() => {
   animatedStats.value = STATS_DATA.map(stat => ({

@@ -181,8 +181,6 @@
     @apply border-border outline-ring/50;
   }
 
-  html {}
-
   body {
     @apply bg-background text-foreground m-0;
     font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

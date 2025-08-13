@@ -1,11 +1,12 @@
 <script setup lang="ts">
 const routeInfo = useRouteInfo();
 const headerRef = ref<HTMLElement | null>(null);
+let observer: IntersectionObserver | null = null;
 
 onMounted(() => {
     const hero = document.getElementById("hero-section");
 
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
         ([entry]) => {
             if (!entry.isIntersecting) {
                 headerRef.value?.classList.add("fixed-header");
@@ -23,6 +24,13 @@ onMounted(() => {
     );
 
     if (hero) observer.observe(hero);
+});
+
+onBeforeUnmount(() => {
+    if (observer) {
+        observer.disconnect();
+        observer = null;
+    }
 });
 
 watch(
