@@ -1,6 +1,5 @@
 <script setup>
 import { contacts } from '~/data/contacts';
-const { isDark, toggleTheme } = useTheme()
 </script>
 
 <template>
@@ -24,30 +23,25 @@ const { isDark, toggleTheme } = useTheme()
 
         </NuxtLink>
 
+        <ThemeToggle />
 
-        <button
-          class="mt-4 px-3 py-1 border rounded-lg hover:bg-accent hover:text-accent-foreground hover:scale-105 active:scale-95 transition self-baseline cursor-pointer"
-          @click="toggleTheme"
-        >
-          {{ isDark ? '🌙 Dark' : '☀️ Light' }}
-        </button>
       </div>
 
-      <Navigation
-        class="flex flex-col gap-2"
-        link-class="text-xl hover:scale-105 transition-transform duration-75"
-      />
-
-      <div class="flex flex-col items-start gap-3">
-        <h3 class="font-bold">Contact</h3>
-        <ContactLinks
-          :contacts="contacts"
-          class="flex-col gap-3"
+        <NavigationDesktop
+          class="flex flex-col gap-2"
+          link-class="text-xl hover:scale-105 transition-transform duration-75"
         />
-        <ContactDrawer>
-          <UiButton class="btn mt-3 text-md">contact us</UiButton>
-        </ContactDrawer>
+
+        <div class="flex flex-col items-start gap-3">
+          <h3 class="font-bold">Contact</h3>
+          <ContactLinks
+            :contacts="contacts"
+            class="flex-col gap-3"
+          />
+          <ContactDrawer>
+            <UiButton class="btn mt-3 text-md">contact us</UiButton>
+          </ContactDrawer>
+        </div>
       </div>
     </div>
-  </div>
 </template>

@@ -35,7 +35,7 @@ const closeMenu = () => {
                         class="rounded-lg"
                     />
 
-                    <Navigation
+                    <NavigationDesktop
                         class="flex flex-col gap-2 py-7 px-0 lg:px-5"
                         link-class="hover:scale-110 transition-transform duration-75"
                         @link-click="isOpen = false"

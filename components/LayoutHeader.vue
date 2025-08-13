@@ -59,7 +59,7 @@ watch(
 
             </NuxtLink>
             <!-- Desktop -->
-            <Navigation
+            <NavigationDesktop
                 class="hidden lg:flex gap-10 font-bold"
                 link-class="animate-underline leading-10"
             />
