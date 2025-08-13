@@ -15,7 +15,7 @@ const props = defineProps<{
       v-for="(item, index) in props.contacts"
       :key="index"
       :href="item.href"
-      :class="props.linkClass ?? 'flex gap-3 items-center text-lg'"
+      :class="props.linkClass ?? 'flex gap-3 items-center text-lg hover:scale-105 active:scale-95 transition'"
       target="_blank"
       rel="noopener"
     >

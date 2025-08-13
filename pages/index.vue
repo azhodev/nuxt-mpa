@@ -61,7 +61,7 @@ useHead({
 </template>
 
 <style scoped>
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (hover: hover) and (pointer: fine)  {
   .home-section__card,
   .home-section__item {
     transition: scale .3s, filter .3s;
