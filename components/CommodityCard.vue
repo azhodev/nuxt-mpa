@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Skeleton } from '@/components/ui/skeleton'
-import { ref, onMounted } from 'vue'
+import type { CommodityCard } from '~/types/cards';
 
-defineProps<{ item: { title: string; image: string; specs: string[] } }>()
+const props = defineProps<{ item: CommodityCard }>()
 
 const showContent = ref(false)
 
@@ -30,12 +30,12 @@ onMounted(() => {
     v-if="showContent"
     class="flex flex-col gap-3"
   >
-    <!-- Изображение -->
+    <!-- Карточка -->
     <div class="w-full sm:h-[298px] overflow-hidden rounded-xl">
       <NuxtPicture
-        :src="item.image"
+        :src="props.item.image"
         class="w-full h-full object-cover"
-        :alt="item.title"
+        :alt="props.item.title"
         format="avif,webp,jpg,png"
         width="800"
         height="600"
@@ -44,13 +44,12 @@ onMounted(() => {
       />
     </div>
 
-    <!-- Заголовок и спецификации -->
     <div class="flex justify-between gap-3">
-      <h2 class="text-3xl">{{ item.title }}</h2>
+      <h2 class="text-3xl">{{ props.item.title }}</h2>
       <div
         class="space-y-1 bg-secondary text-secondary-foreground py-6 px-5.5 rounded-xl xs:space-y-2 xs:max-w-[300px]">
         <p
-          v-for="(spec, i) in item.specs"
+          v-for="(spec, i) in props.item.specs"
           :key="i"
           class="text-xs"
         >
@@ -71,7 +70,7 @@ onMounted(() => {
       <Skeleton class="bg-gray-300 dark:bg-gray-800 h-8 w-1/2" />
       <div class="py-6 px-5.5 rounded-xl xs:max-w-[300px] w-full">
         <Skeleton
-          v-for="(spec, i) in item.specs"
+          v-for="(spec, i) in props.item.specs"
           :key="i"
           class="bg-gray-300 dark:bg-gray-800 h-4 mb-2"
           :class="skeletonWidthClasses[i % skeletonWidthClasses.length]"

@@ -1,13 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  groups: {
-    name: string
-    contacts: {
-      href: string
-      icon: string
-      label: string
-    }[]
-  }[]
+import type { ContactGroup } from '~/types/contacts'
+const props = defineProps<{
+  groups: ContactGroup[]
   wrapperClass?: string
   itemClass?: string
   nameClass?: string
@@ -21,7 +15,7 @@ defineProps<{
 <template>
   <div :class="wrapperClass ?? 'flex flex-col gap-5'">
     <div
-      v-for="(group, index) in groups"
+      v-for="(group, index) in props.groups"
       :key="index"
       :class="itemClass ?? 'flex flex-col gap-3'"
     >

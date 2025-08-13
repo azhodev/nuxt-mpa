@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { toast } from 'vue-sonner'
 import { useForm, configure } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
-import { toast } from 'vue-sonner'
 
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea' // если у тебя нет этого компонента, нужно его добавить
 import {
     FormControl,
     FormDescription,
@@ -13,18 +15,8 @@ import {
     FormLabel,
     FormMessage,
 } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea' // если у тебя нет этого компонента, нужно его добавить
 
 const isDrawerOpen = useState('drawerOpen')
-
-// Default values
-configure({
-    validateOnBlur: true, // controls if `blur` events should trigger validation with `handleChange` handler
-    validateOnChange: false, // controls if `change` events should trigger validation with `handleChange` handler
-    validateOnInput: false, // controls if `input` events should trigger validation with `handleChange` handler
-    validateOnModelUpdate: false, // controls if `update:modelValue` events should trigger validation with `handleChange` handler
-});
 
 // Валидация с Zod
 const formSchema = toTypedSchema(z.object({
@@ -49,12 +41,21 @@ const onSubmit = form.handleSubmit((values) => {
         },
     })
 })
+
+// Default values
+configure({
+    validateOnBlur: true, // controls if `blur` events should trigger validation with `handleChange` handler
+    validateOnChange: false, // controls if `change` events should trigger validation with `handleChange` handler
+    validateOnInput: false, // controls if `input` events should trigger validation with `handleChange` handler
+    validateOnModelUpdate: false, // controls if `update:modelValue` events should trigger validation with `handleChange` handler
+});
+
 </script>
 
 <template>
     <form
-        @submit="onSubmit"
         class="space-y-4"
+        @submit="onSubmit"
     >
         <!-- Name -->
         <FormField

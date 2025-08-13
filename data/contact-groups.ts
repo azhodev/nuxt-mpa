@@ -1,29 +1,18 @@
-// data/contact-groups.ts
+import { contacts } from "./contacts"
+import type { ContactGroup } from "~/types/contacts"
 
-export const contactGroups = [
+export const contactGroups: ContactGroup[] = [
   {
     name: 'Alex Panfilov. CEO',
     contacts: [
-      {
-        href: 'https://t.me/avazmore',
-        icon: '/icons/telegram.webp',
-        label: 'Telegram',
-      },
-      {
-        href: 'https://t.me/avazmore',
-        icon: '/icons/whatsapp.webp',
-        label: 'Whatsapp',
-      },
+      contacts[1],
+      contacts[2],
     ],
   },
   {
     name: 'Natalie Lauren. Head of Sales',
     contacts: [
-      {
-        href: 'https://t.me/avazmore',
-        icon: '/icons/whatsapp.webp',
-        label: 'Whatsapp',
-      },
+      contacts[2],
     ],
   },
 ]

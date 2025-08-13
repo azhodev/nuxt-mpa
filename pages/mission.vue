@@ -22,7 +22,7 @@ useHead({
             </div>
 
             <div class="flex flex-col justify-between gap-12 row-span-2">
-                <MissionItem
+                <MissionCard
                     v-for="(feature, index) in features"
                     :key="index"
                     v-bind="feature"

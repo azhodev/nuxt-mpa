@@ -1,10 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  contacts: {
-    href: string
-    icon: string
-    label: string
-  }[]
+import type { Contact } from '~/types/contacts';
+const props = defineProps<{
+  contacts: Contact[]
   wrapperClass?: string
   linkClass?: string
   iconClass?: string
@@ -13,18 +10,18 @@ defineProps<{
 </script>
 
 <template>
-  <div :class="wrapperClass ?? 'flex'">
+  <div :class="props.wrapperClass ?? 'flex'">
     <a
-      v-for="(item, index) in contacts"
+      v-for="(item, index) in props.contacts"
       :key="index"
       :href="item.href"
-      :class="linkClass ?? 'flex gap-3 items-center text-lg'"
+      :class="props.linkClass ?? 'flex gap-3 items-center text-lg'"
       target="_blank"
       rel="noopener"
     >
       <NuxtPicture
         :src="item.icon"
-        :class="iconClass ?? 'w-6 h-6'"
+        :class="props.iconClass ?? 'w-6 h-6'"
         width="24"
         height="24"
         alt=""
@@ -32,7 +29,7 @@ defineProps<{
         sizes="sm:100vw md:50vw lg:800px"
       />
 
-      <span :class="labelClass">{{ item.label }}</span>
+      <span :class="props.labelClass">{{ item.label }}</span>
     </a>
   </div>
 </template>

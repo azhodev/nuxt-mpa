@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
-
 const routeInfo = useRouteInfo();
 const headerRef = ref<HTMLElement | null>(null);
 

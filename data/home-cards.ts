@@ -1,4 +1,6 @@
-export const cards = [
+import type { HomeCard } from "~/types/cards"
+
+export const cards: HomeCard[] = [
   {
     to: "/about",
     image: "/cards/1.webp",
