@@ -339,4 +339,17 @@
   .my-grid-cols {
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   }
+
+
+  /* Transition Animation */
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all .3s;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+    filter: blur(3px);
+  }
 }

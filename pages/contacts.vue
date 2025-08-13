@@ -2,33 +2,16 @@
 import { contactGroups } from '~/data/contact-groups'
 import { Skeleton } from '@/components/ui/skeleton'
 import { ref, onMounted } from 'vue'
+import { offices } from '~/data/offices'
 
 const isMapLoaded = ref(false)
-const mapError = ref(false)
 const mapIframe = ref(null)
 
-// Альтернативный вариант: проверяем готовность iframe после монтирования
 onMounted(() => {
   setTimeout(() => {
     isMapLoaded.value = true
   }, 1200)
 })
-
-const offices = [
-  {
-    title: 'Dubai (Head office)',
-    address: 'Compass Building, Al Shohada Road, AL Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates',
-    icon: '/icons/map-black.png'
-  },
-  {
-    title: 'Cyprus (Branch office)',
-    address: null
-  },
-  {
-    title: 'Ukraine (Branch office)',
-    address: null
-  }
-]
 
 useHead({
   title: 'Contacts',
@@ -59,7 +42,7 @@ useHead({
           />
 
           <iframe
-            v-show="isMapLoaded && !mapError"
+            v-show="isMapLoaded"
             ref="mapIframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.571716757246!2d55.792997597608576!3d25.68548832371739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60a66a9ef3a97%3A0xda216043665fac58!2sTAG%20Middle%20East%20FZE!5e0!3m2!1sru!2s!4v1751384256539!5m2!1sru!2s"
             height="450"
@@ -82,6 +65,7 @@ useHead({
             icon-class="w-6 h-6"
           />
         </section>
+
         <section class="flex flex-col gap-5">
           <h2>Offices</h2>
           <article

@@ -61,13 +61,15 @@ useHead({
 </template>
 
 <style scoped>
-.home-section__card,
-.home-section__item {
-  transition: scale .3s, filter .3s;
-}
-.home-section__cards-grid:has(:hover) .home-section__card:not(:hover),
-.home-section__grid:has(:hover) .home-section__item:not(:hover) {
-  scale: 0.99;
-  filter: blur(2px);
+@media (min-width: 1280px) {
+  .home-section__card,
+  .home-section__item {
+    transition: scale .3s, filter .3s;
+  }
+  .home-section__cards-grid:has(:hover) .home-section__card:not(:hover),
+  .home-section__grid:has(:hover) .home-section__item:not(:hover) {
+    scale: 0.99;
+    filter: blur(2px);
+  }
 }
 </style>

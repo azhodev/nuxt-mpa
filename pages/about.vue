@@ -1,7 +1,24 @@
 <script setup>
 import { Skeleton } from '@/components/ui/skeleton'
-import { ref, onMounted } from 'vue'
 import TiltParagraph from '@/components/ui/TiltParagraph.vue'
+
+const imageLoaded = ref(false);
+const LOADING_DELAY = 600; // Задержка в миллисекундах
+
+let timeoutId = null
+
+onMounted(() => {
+  timeoutId = setTimeout(() => {
+    imageLoaded.value = true
+  }, LOADING_DELAY)
+})
+
+onUnmounted(() => {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+    timeoutId = null;
+  }
+})
 
 useHead({
   title: 'About Us',
@@ -11,15 +28,6 @@ useHead({
       content: 'Learn more about Agrofusion, our values, our team, and our journey in modern agriculture.'
     }
   ]
-})
-
-const imageLoaded = ref(false)
-const LOADING_DELAY = 600 // Задержка в миллисекундах
-
-onMounted(() => {
-  setTimeout(() => {
-    imageLoaded.value = true
-  }, LOADING_DELAY)
 })
 </script>
 
@@ -76,13 +84,3 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: all .3s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-  filter: blur(3px);
-}
-</style>
