@@ -74,12 +74,12 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="flex flex-col lg:flex-row gap-6 lg:pl-4 xl:pl-12 text-center text-white border-l-divider">
+  <div class="flex flex-col lg:flex-row gap-6 lg:pl-4 xl:pl-12 text-center text-foreground border-l-divider">
     <div
       v-for="(item, index) in animatedStats"
       :key="index"
       :data-stat-index="index"
-      class="flex flex-col items-center odd:ml-20 even:mr-20 lg:odd:ml-0 lg:even:mr-0 transition-opacity duration-700 will-change-transform"
+      class="flex flex-col items-center odd:ml-20 even:mr-20 lg:odd:ml-0 lg:even:mr-0 transition-opacity duration-700 will-change-transform text-shadow-lg"
       :class="item.isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'"
     >
       <div
@@ -92,3 +92,9 @@ onBeforeUnmount(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(196, 193, 193, 0.5);
+}
+</style>

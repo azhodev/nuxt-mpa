@@ -3,10 +3,9 @@
         <div class="flex-1 basis-full lg:basis-0 flex-col items-center">
             <p class="text-lg text-accent">GRAIN TRADING COMPANY</p>
             <h1
-                class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] mb-5 text-secondary-foreground font-serif">
+                class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] mb-5 text-accent font-serif">
                 Agrofusion
             </h1>
-            <!-- <UiButton class="btn bg-accent text-accent-foreground hover:bg-green-800 lowercase">Contact Us</UiButton> -->
             <ContactDrawer>
                 <WaweButton>Contact Us</WaweButton>
             </ContactDrawer>
@@ -16,15 +15,15 @@
             <NuxtPicture
                 src="/logo.webp"
                 width="138"
-                class="absolute bottom-full hidden lg:block"
+                class="absolute bottom-full hidden lg:block text-foreground"
                 alt="Logo Icon"
                 format="avif,webp,jpg"
                 sizes="sm:100vw md:50vw lg:800px"
-            />
+            />      
 
             <Navigation
                 class="flex flex-col gap-2 py-7 px-0 lg:px-5"
-                link-class="hover:scale-110 transition-transform duration-75"
+                link-class="hover:scale-110 transition-transform duration-75 text-foreground"
             />
         </div>
     </div>

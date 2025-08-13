@@ -129,7 +129,7 @@
   /* Текст в сайдбаре */
   --sidebar-primary: oklch(0.205 0 0);
   /* Акцентный фон в сайдбаре */
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(27.79% 0.00146 16.053 / 0.171);
   /* Текст на фоне primary в сайдбаре  */
   --sidebar-accent: oklch(0.97 0 0);
   /* Дополнительный цвет в сайдбаре */
@@ -154,8 +154,8 @@
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.985 0 0);
+  --accent-foreground: oklch(0.269 0 0);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.269 0 0);
@@ -169,7 +169,7 @@
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(16.029% 0.00168 16.738 / 0.836);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);

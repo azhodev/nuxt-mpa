@@ -15,5 +15,5 @@
             type="video/mp4"
         />
     </video>
-    <div class="fixed top-0 w-full h-full object-cover -z-10 bg-black/80"></div>
+    <div class="fixed top-0 w-full h-full object-cover -z-10 bg-sidebar-primary-foreground"></div>
 </template>

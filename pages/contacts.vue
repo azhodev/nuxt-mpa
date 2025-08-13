@@ -28,7 +28,7 @@ useHead({
   <div class="py-[60px] lg:py-[110px]">
     <div class="container grid lg:grid-cols-2 gap-5 flex-wrap">
       <div class="flex-1 shrink-0">
-        <h2>Find Our Global Offices</h2>
+        <h2 class="text-foreground">Find Our Global Offices</h2>
         <p class="mt-3.5 max-w-[470px]">
           Feel free to contact us for business, careers and
           information. We look forward to hearing from you.
@@ -56,7 +56,7 @@ useHead({
 
       <div class="flex-1 px-9 flex flex-col gap-13">
         <section class="flex flex-col gap-5">
-          <h2>Contacts</h2>
+          <h2 class="text-foreground">Contacts</h2>
           <ContactLists
             :groups="contactGroups"
             item-class="flex flex-col gap-3"
@@ -67,7 +67,7 @@ useHead({
         </section>
 
         <section class="flex flex-col gap-5">
-          <h2>Offices</h2>
+          <h2 class="text-foreground">Offices</h2>
           <article
             v-for="(office, i) in offices"
             :key="i"

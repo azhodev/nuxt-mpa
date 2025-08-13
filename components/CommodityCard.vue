@@ -45,7 +45,7 @@ onMounted(() => {
     </div>
 
     <div class="flex justify-between gap-3">
-      <h2 class="text-3xl">{{ props.item.title }}</h2>
+      <h2 class="text-3xl text-foreground">{{ props.item.title }}</h2>
       <div
         class="space-y-1 bg-secondary text-secondary-foreground py-6 px-5.5 rounded-xl xs:space-y-2 xs:max-w-[300px]">
         <p
