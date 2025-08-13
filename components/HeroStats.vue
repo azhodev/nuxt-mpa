@@ -1,15 +1,6 @@
 <script setup lang="ts">
 import { STATS_DATA } from '~/data/stats'
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-
-interface AnimatedStat {
-  target: number
-  current: number | string
-  description: string
-  isAnimating: boolean
-  isVisible: boolean
-  el: Element | null
-}
+import type { AnimatedStat } from '~/types/stats'
 
 const animatedStats = ref<AnimatedStat[]>([])
 
@@ -38,9 +29,9 @@ let observer: IntersectionObserver | null = null
 
 onMounted(() => {
   animatedStats.value = STATS_DATA.map(stat => ({
+    ...stat,
     target: stat.value,
     current: 0,
-    description: stat.description,
     isAnimating: false,
     isVisible: false,
     el: null,

@@ -14,7 +14,7 @@ export const STATS_DATA: IStatItem[] = [
         description: 'products'
     },
     {
-        value: '1.5',
+        value: 1.5,
         description: 'million tonnes of volume per year'
     }
 ]

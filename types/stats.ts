@@ -1,4 +1,12 @@
 export interface IStatItem {
-    value: string | number
-    description: string
+    value: number;
+    description: string;
+}
+
+export interface AnimatedStat extends IStatItem {
+    target: number;
+    current: number;
+    isAnimating: boolean;
+    isVisible: boolean;
+    el: Element | null;
 }
