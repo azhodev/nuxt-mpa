@@ -63,7 +63,7 @@ useHead({
             ref="mapIframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.571716757246!2d55.792997597608576!3d25.68548832371739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60a66a9ef3a97%3A0xda216043665fac58!2sTAG%20Middle%20East%20FZE!5e0!3m2!1sru!2s!4v1751384256539!5m2!1sru!2s"
             height="450"
-            class="w-full rounded-[4px] absolute top-0 left-0"
+            class="w-full rounded-[4px]"
             style="border: 0"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
