@@ -13,19 +13,19 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div :class="wrapperClass ?? 'flex flex-col gap-5'">
+  <div :class="props.wrapperClass ?? 'flex flex-col gap-5'">
     <div
       v-for="(group, index) in props.groups"
       :key="index"
-      :class="itemClass ?? 'flex flex-col gap-3'"
+      :class="props.itemClass ?? 'flex flex-col gap-3'"
     >
-      <h3 :class="nameClass ?? 'font-normal w-full xs:w-[258px]'">{{ group.name }}</h3>
+      <h3 :class="props.nameClass ?? 'font-normal w-full xs:w-[258px]'">{{ group.name }}</h3>
       <ContactLinks
         :contacts="group.contacts"
-        :wrapper-class="linkWrapperClass ?? 'flex flex-col gap-2'"
-        :link-class="linkClass"
-        :icon-class="iconClass"
-        :label-class="labelClass"
+        :wrapper-class="props.linkWrapperClass ?? 'flex flex-col gap-2'"
+        :link-class="props.linkClass"
+        :icon-class="props.iconClass"
+        :label-class="props.labelClass"
       />
     </div>
   </div>

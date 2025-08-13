@@ -2,31 +2,38 @@
 import ContactForm from '~/components/ContactForm.vue';
 import {
   Drawer,
+  DrawerTrigger,
   DrawerContent,
-  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
+  DrawerDescription,
 } from '@/components/ui/drawer'
 
-const isDrawerOpen = useState('drawerOpen', () => false)
+const isDrawerOpen = ref(false)
 </script>
 
 <template>
   <Drawer v-model:open="isDrawerOpen">
-    <DrawerTrigger as-child>
+    <DrawerTrigger
+      as-child
+      @click="$event.target.blur()"
+    >
       <slot />
     </DrawerTrigger>
-    <DrawerContent class="rounded-t-0">
+
+    <Teleport to="body">
+      <DrawerContent class="rounded-t-0">
         <div class="mx-auto px-4 w-full max-w-xl min-h-[100vh]">
-            <DrawerHeader>
-              <DrawerTitle>Contact Us</DrawerTitle>
-              <DrawerDescription class="sr-only">
-                Leave your contact details and we will contact you
-              </DrawerDescription>
-            </DrawerHeader>
-            <ContactForm />
+          <DrawerHeader>
+            <DrawerTitle>Contact Us</DrawerTitle>
+            <DrawerDescription class="sr-only">
+              Leave your contact details and we will contact you
+            </DrawerDescription>
+          </DrawerHeader>
+
+          <ContactForm />
         </div>
-    </DrawerContent>
+      </DrawerContent>
+    </Teleport>
   </Drawer>
 </template>

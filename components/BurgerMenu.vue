@@ -24,6 +24,7 @@ const closeMenu = () => {
                     <!-- Кнопка закрытия -->
 
                     <BurgerButton color-class="btn bg-accent" />
+                    
                     <NuxtPicture
                         src="/logo-black.webp"
                         width="183"
@@ -39,6 +40,7 @@ const closeMenu = () => {
                         link-class="hover:scale-110 transition-transform duration-75"
                         @link-click="isOpen = false"
                     />
+
                     <ContactDrawer>
                         <WaweButton>Contact Us</WaweButton>
                     </ContactDrawer>

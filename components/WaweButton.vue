@@ -1,5 +1,14 @@
+<script setup lang="ts">
+const blurOnClick = (e: MouseEvent) => {
+	(e.currentTarget as HTMLButtonElement | null)?.blur()
+}
+</script>
+
 <template>
-	<button class="wave-btn">
+	<button
+		class="wave-btn"
+		@click="blurOnClick"
+	>
 		<span class="wave-btn__text">
 			<slot />
 		</span>
@@ -7,15 +16,11 @@
 	</button>
 </template>
 
-<script setup>
-
-</script>
-
 <style scoped>
 /* Основные стили */
 .wave-btn {
 	cursor: pointer;
-	
+
 	width: 127px;
 	height: 36px;
 	display: -webkit-flex;
