@@ -1,23 +1,30 @@
 <script setup lang="ts">
 const routeInfo = useRouteInfo();
+
 const headerRef = ref<HTMLElement | null>(null);
 let observer: IntersectionObserver | null = null;
+
+const isHomePage = computed(() => routeInfo.isHomePage);
+
+function showHeader() {
+    headerRef.value?.classList.add("header-visible");
+    headerRef.value?.classList.remove("header-hidden");
+}
+
+function hideHeader() {
+    headerRef.value?.classList.add("header-hidden");
+    headerRef.value?.classList.remove("header-visible");
+}
 
 onMounted(() => {
     const hero = document.getElementById("hero-section");
 
     observer = new IntersectionObserver(
         ([entry]) => {
-            if (!entry.isIntersecting) {
-                headerRef.value?.classList.add("header-visible");
-                if (!routeInfo.isHomePage) {
-                    headerRef.value?.classList.remove("header-hidden");
-                }
+            if (entry.isIntersecting && isHomePage.value) {
+                hideHeader();
             } else {
-                headerRef.value?.classList.remove("header-visible");
-                if (!routeInfo.isHomePage) {
-                    headerRef.value?.classList.add("header-hidden");
-                }
+                showHeader();
             }
         },
         { threshold: 0.1 }
@@ -39,21 +46,21 @@ watch(
         if (!headerRef.value) return;
 
         if (!newVal) {
-            headerRef.value.classList.remove("header-hidden");
-            headerRef.value?.classList.add("header-visible");
+            showHeader();
         } else {
-            headerRef.value.classList.add("header-hidden");
-            headerRef.value?.classList.remove("header-visible");
+            hideHeader();
         }
     },
-    { deep: true }
+    {
+        immediate: true
+    }
 );
 </script>
 
 <template>
     <header
         ref="headerRef"
-        class="fixed flex w-full z-20 bg-black/50 hover:bg-black/90 text-primary transition-all header-hidden"
+        class="fixed flex w-full z-20 bg-black/50 hover:bg-black/90 text-primary transition-all"
     >
         <div class="container flex justify-between items-center">
             <NuxtLink to="/">
