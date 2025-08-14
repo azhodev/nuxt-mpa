@@ -8,7 +8,7 @@ import 'vue-sonner/style.css'
 <template>
   <AppLoader />
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage/>
   </NuxtLayout>
   <Toaster />
 </template>

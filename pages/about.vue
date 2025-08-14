@@ -1,24 +1,13 @@
 <script setup>
-import { Skeleton } from '@/components/ui/skeleton'
 import TiltParagraph from '@/components/ui/TiltParagraph.vue'
+import ImageSlider from '@/components/ui/ImageSlider.vue'
 
-const imageLoaded = ref(false);
-const LOADING_DELAY = 600; // Задержка в миллисекундах
-
-let timeoutId = null
-
-onMounted(() => {
-  timeoutId = setTimeout(() => {
-    imageLoaded.value = true
-  }, LOADING_DELAY)
-})
-
-onUnmounted(() => {
-  if (timeoutId) {
-    clearTimeout(timeoutId);
-    timeoutId = null;
-  }
-})
+const images = [
+  '/bg-about-us.png',
+  '/bg-about-us-1.jpg',
+  '/bg-about-us-2.jpg',
+  '/bg-about-us-3.jpg'
+]
 
 useHead({
   title: 'About Us',
@@ -35,9 +24,11 @@ useHead({
   <div>
     <div class="container py-8 xs:py-22">
       <section class="relative flex flex-col gap-5">
-        <div class="lg:absolute bg-secondary text-secondary-foreground py-10 px-8 max-w-150 w-full rounded-[12px]">
+        <div
+          class="lg:absolute z-10 bg-secondary hover:bg-secondary/80 transition-colors text-secondary-foreground py-10 px-8 max-w-150 w-full rounded-[12px]"
+        >
           <h2 class="mb-4 text-secondary-foreground">About Us</h2>
-          <TiltParagraph 
+          <TiltParagraph
             custom-class="leading-relaxed text-sm sm:text-base"
             :tilt-intensity="7"
           >
@@ -59,26 +50,18 @@ useHead({
             </UiButton>
           </ContactDrawer>
         </div>
-        <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden">
-          <template  v-if="imageLoaded">
-            <transition name="fade">
-              <NuxtPicture
-                v-if="imageLoaded"
-                src="/bg-about-us.png"
-                class="w-full"
-                alt="Factory Image"
-                format="avif,webp,jpg,png"
-                width="800"
-                height="600"
-                sizes="sm:100vw md:50vw lg:800px"
-                :img-attrs="{
-                  class: 'h-full w-full object-cover',
-                  style: 'display: block',
-                }"
-              />
-            </transition>
-          </template>
-          <Skeleton v-else class="w-full h-[800px] bg-gray-300 dark:bg-gray-800" />
+
+        <div class="max-w-[1230px] max-h-[737px] w-full h-full ml-auto mt-auto md:mt-12 rounded-[12px] overflow-hidden relative -z-0">
+          <ImageSlider
+            :images="images"
+            :img-attrs="{
+              class: 'h-full w-full object-cover',
+              width: 1000,
+              height: 600,
+              sizes: 'sm:100vw md:50vw lg:800px',
+              alt: 'Factory Image'
+            }"
+          />
         </div>
       </section>
     </div>
