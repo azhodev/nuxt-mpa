@@ -3,7 +3,7 @@ import { contacts } from '~/data/contacts';
 </script>
 
 <template>
-  <div class="bg-secondary text-secondary-foreground pl-[12%] sm:pl-0">
+  <footer class="bg-secondary text-secondary-foreground pl-[12%] sm:pl-0">
     <div class="container grid sm:grid-cols-2 md:grid-cols-3 gap-9 md:gap-5 pb-20 md:pb-9 pt-9">
 
       <div class="flex flex-col">
@@ -43,5 +43,5 @@ import { contacts } from '~/data/contacts';
           </ContactDrawer>
         </div>
       </div>
-    </div>
+    </footer>
 </template>

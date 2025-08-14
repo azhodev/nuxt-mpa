@@ -273,12 +273,12 @@
     mask: radial-gradient(circle at 2% -5%, transparent 70%, var(--color-background) 72.1%);
   }
 
-  .fixed-header {
-    @apply fixed translate-y-full;
+  .header-hidden {
+    @apply opacity-0 blur-2xl;
   }
 
-  .absolute-header {
-    @apply absolute translate-y-full;
+  .header-visible {
+    @apply opacity-100 blur-none;
   }
 
   .animate-underline {

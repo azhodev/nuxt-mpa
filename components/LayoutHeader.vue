@@ -9,14 +9,14 @@ onMounted(() => {
     observer = new IntersectionObserver(
         ([entry]) => {
             if (!entry.isIntersecting) {
-                headerRef.value?.classList.add("fixed-header");
+                headerRef.value?.classList.add("header-visible");
                 if (!routeInfo.isHomePage) {
-                    headerRef.value?.classList.remove("absolute-header");
+                    headerRef.value?.classList.remove("header-hidden");
                 }
             } else {
-                headerRef.value?.classList.remove("fixed-header");
+                headerRef.value?.classList.remove("header-visible");
                 if (!routeInfo.isHomePage) {
-                    headerRef.value?.classList.add("absolute-header");
+                    headerRef.value?.classList.add("header-hidden");
                 }
             }
         },
@@ -39,9 +39,11 @@ watch(
         if (!headerRef.value) return;
 
         if (!newVal) {
-            headerRef.value.classList.add("absolute-header");
+            headerRef.value.classList.remove("header-hidden");
+            headerRef.value?.classList.add("header-visible");
         } else {
-            headerRef.value.classList.remove("absolute-header");
+            headerRef.value.classList.add("header-hidden");
+            headerRef.value?.classList.remove("header-visible");
         }
     },
     { deep: true }
@@ -49,9 +51,9 @@ watch(
 </script>
 
 <template>
-    <div
+    <header
         ref="headerRef"
-        class="fixed flex bottom-full w-full z-20 bg-black/50 hover:bg-black/90 text-primary transition-all"
+        class="fixed flex w-full z-20 bg-black/50 hover:bg-black/90 text-primary transition-all header-hidden"
     >
         <div class="container flex justify-between items-center">
             <NuxtLink to="/">
@@ -79,5 +81,5 @@ watch(
                 <NavigationMobile />
             </div>
         </div>
-    </div>
+    </header>
 </template>
