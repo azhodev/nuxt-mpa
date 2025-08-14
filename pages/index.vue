@@ -18,7 +18,7 @@ useHead({
     <div class="home-section__container container">
       <div class="home-section__grid flex gap-4 xs:gap-5 flex-col xl:flex-row">
         <div class="home-section__cards-grid home-section__item flex-1 grid xs:grid-cols-(--home-grid-cols) gap-x-4 gap-y-4">
-          <CardHome
+          <LazyCardHome
             v-for="(item, index) in cards"
             :key="index"
             :to="item.to"
@@ -29,7 +29,7 @@ useHead({
           />
         </div>
         <div class="home-section__contact home-section__item xs:basis-[400px] min-h-[636px] relative rounded-[24px] overflow-hidden">
-          <NuxtPicture
+          <LazyNuxtPicture
             alt="The Catcher in the Rye"
             src="/cards/5.webp"
             class="absolute top-0 left-0 w-full h-full object-cover"
@@ -45,7 +45,7 @@ useHead({
 
           <div class="absolute p-2 xs:p-9 w-full">
             <h2 class="text-center xs:text-left">contact us</h2>
-            <ContactLists
+            <LazyContactLists
               :groups="contactGroups"
               class="mt-5"
               item-class="flex flex-col gap-3 border-l border-black/30 pl-5"

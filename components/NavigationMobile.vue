@@ -1,6 +1,6 @@
 <template>
     <div>
-        <BurgerButton color-class="bg-background" />
-        <BurgerMenu />
+        <LazyBurgerButton color-class="bg-background" />
+        <LazyBurgerMenu />
     </div>
 </template>

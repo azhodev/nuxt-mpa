@@ -6,13 +6,13 @@
                 class="text-[clamp(2.5rem,14vw,5rem)] sm:text-[clamp(5rem,9vw,9rem)] mb-5 text-accent font-serif">
                 Agrofusion
             </h1>
-            <ContactDrawer>
+            <LazyContactDrawer>
                 <WaweButton>Contact Us</WaweButton>
-            </ContactDrawer>
+            </LazyContactDrawer>
         </div>
 
         <div class="relative border-border border-l-0 lg:border-l-1">
-            <NuxtPicture
+            <LazyNuxtPicture
                 src="/logo-black.webp"
                 width="138"
                 class="absolute bottom-full hidden lg:block text-foreground"
@@ -21,7 +21,7 @@
                 sizes="sm:100vw md:50vw lg:800px"
             />      
 
-            <NavigationDesktop
+            <LazyNavigationDesktop
                 class="flex flex-col gap-2 py-7 px-0 lg:px-5"
                 link-class="hover:scale-110 transition-transform duration-75 text-foreground"
             />

@@ -76,15 +76,15 @@ watch(
 
             </NuxtLink>
 
-            <NavigationDesktop
+            <LazyNavigationDesktop
                 class="hidden lg:flex gap-10 font-bold"
                 link-class="animate-underline leading-10"
             />
-            <ContactDrawer>
+            <LazyContactDrawer>
                 <UiButton class="btn hidden lg:flex px-5 py-1.5">contact us</UiButton>
-            </ContactDrawer>
+            </LazyContactDrawer>
 
-            <NavigationMobile class="flex lg:hidden" />
+            <LazyNavigationMobile class="flex lg:hidden" />
         </div>
     </header>
 </template>
