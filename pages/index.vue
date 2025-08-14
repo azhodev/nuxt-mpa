@@ -18,7 +18,7 @@ useHead({
     <div class="home-section__container container">
       <div class="home-section__grid flex gap-4 xs:gap-5 flex-col xl:flex-row">
         <div class="home-section__cards-grid home-section__item flex-1 grid xs:grid-cols-(--home-grid-cols) gap-x-4 gap-y-4">
-          <HomeCard
+          <CardHome
             v-for="(item, index) in cards"
             :key="index"
             :to="item.to"

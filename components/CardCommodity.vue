@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Skeleton } from '@/components/ui/skeleton'
-import type { CommodityCard } from '~/types/cards';
+import type { CardCommodity } from '~/types/cards';
 
-const props = defineProps<{ item: CommodityCard }>()
+const props = defineProps<{ item: CardCommodity }>()
 
 const showContent = ref(false)
 

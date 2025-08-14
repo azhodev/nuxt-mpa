@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { MENU_DATA } from '~/data/menu';
+
+const HeroVideo = defineAsyncComponent(() => import('~/components/HeroVideo.vue'))
+
 const routeInfo = useRouteInfo()
 
 const pageTitle = computed(() => {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { MissionCard } from '~/types/cards';
-const props = defineProps<MissionCard>()
+import type { CardMission } from '~/types/cards';
+const props = defineProps<CardMission>()
 </script>
 
 <template>

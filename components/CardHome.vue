@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { HomeCard } from '~/types/cards'
-const props = defineProps<HomeCard>()
+import type { CardHome } from '~/types/cards'
+const props = defineProps<CardHome>()
 </script>
 
 <template>
@@ -8,21 +8,23 @@ const props = defineProps<HomeCard>()
         :to="props.to"
         class="relative pb-[70%] overflow-hidden rounded-[24px] flex flex-col hero-card"
     >
-        <NuxtPicture
-            :src="props.image"
-            class="absolute top-0 left-0 w-full h-full object-cover"
-            :alt="props.title"
-            format="avif,webp,jpg,png"
-            sizes="(max-width: 640px) 100vw, 400px"
-            quality="60"
-            width="400"
-            height="260"
-            loading="lazy"
-            :img-attrs="{
-                class: 'h-full w-full object-cover',
-                style: 'display: block',
-            }"
-        />
+        <transition name="fade">
+            <NuxtPicture
+                :src="props.image"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                :alt="props.title"
+                format="avif,webp,jpg,png"
+                sizes="(max-width: 640px) 100vw, 400px"
+                quality="60"
+                width="400"
+                height="260"
+                loading="lazy"
+                :img-attrs="{
+                    class: 'h-full w-full object-cover',
+                    style: 'display: block',
+                }"
+            />
+        </transition>
 
         <div
             class="absolute h-full p-5 flex flex-col items-start justify-between bg-black/40 text-secondary-foreground">

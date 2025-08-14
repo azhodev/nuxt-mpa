@@ -3,16 +3,16 @@ export interface Card {
     description: string
 }
 
-export interface MissionCard extends Card {
+export interface CardMission extends Card {
     icon: string;
 }
 
-export interface HomeCard extends Card {
+export interface CardHome extends Card {
     image: string;
     to: string;
 }
 
-export interface CommodityCard extends Card {
+export interface CardCommodity extends Card {
     image: string;
     specs: string[]
 }

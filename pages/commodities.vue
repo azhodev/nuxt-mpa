@@ -15,7 +15,7 @@ useHead({
     <div class="pt-8 pb-15">
         <div class="container">
             <div class="grid xs:grid-cols-(--my-grid-cols) gap-5">
-                <CommodityCard
+                <CardCommodity
                     v-for="(item, index) in commodities"
                     :key="index"
                     :item="item"
