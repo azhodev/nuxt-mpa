@@ -129,7 +129,7 @@
   /* Текст в сайдбаре */
   --sidebar-primary: oklch(0.205 0 0);
   /* Акцентный фон в сайдбаре */
-  --sidebar-primary-foreground: oklch(27.79% 0.00146 16.053 / 0.171);
+  --sidebar-primary-foreground: oklch(78.261% 0.00009 271.152 / 0.171);
   /* Текст на фоне primary в сайдбаре  */
   --sidebar-accent: oklch(0.97 0 0);
   /* Дополнительный цвет в сайдбаре */

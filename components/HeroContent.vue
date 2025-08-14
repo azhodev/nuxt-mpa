@@ -13,7 +13,7 @@
 
         <div class="relative border-border border-l-0 lg:border-l-1">
             <NuxtPicture
-                src="/logo.webp"
+                src="/logo-black.webp"
                 width="138"
                 class="absolute bottom-full hidden lg:block text-foreground"
                 alt="Logo Icon"

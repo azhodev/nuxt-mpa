@@ -60,7 +60,7 @@ watch(
 <template>
     <header
         ref="headerRef"
-        class="fixed flex w-full z-20 bg-black/50 hover:bg-black/90 text-primary transition-all"
+        class="fixed -top-1 flex w-full z-20 bg-black/50 hover:bg-black/90 text-primary transition-all"
     >
         <div class="container flex justify-between items-center">
             <NuxtLink to="/">
@@ -75,7 +75,7 @@ watch(
                 />
 
             </NuxtLink>
-            <!-- Desktop -->
+
             <NavigationDesktop
                 class="hidden lg:flex gap-10 font-bold"
                 link-class="animate-underline leading-10"
@@ -83,10 +83,8 @@ watch(
             <ContactDrawer>
                 <UiButton class="btn hidden lg:flex px-5 py-1.5">contact us</UiButton>
             </ContactDrawer>
-            <!-- Mobile -->
-            <div class="flex lg:hidden">
-                <NavigationMobile />
-            </div>
+
+            <NavigationMobile class="flex lg:hidden" />
         </div>
     </header>
 </template>
