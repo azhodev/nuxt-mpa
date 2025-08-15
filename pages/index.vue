@@ -14,7 +14,7 @@ useHead({
 </script>
 
 <template>
-  <div class="home-section py-8 xs:py-15">
+  <div class="home-section py-8 xs:py-15 my-auto">
     <div class="home-section__container container">
       <div class="home-section__grid flex gap-4 xs:gap-5 flex-col xl:flex-row">
         <div class="home-section__cards-grid home-section__item flex-1 grid xs:grid-cols-(--home-grid-cols) gap-x-4 gap-y-4">

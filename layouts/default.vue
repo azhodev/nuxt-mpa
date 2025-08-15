@@ -9,7 +9,7 @@ const { isHomePage } = useRouteInfo()
     <LayoutHeader />
 
     <HeroSection :is-home-page="isHomePage" />
-    <main class="bg-background min-h-screen flex flex-col justify-center align-middle flex-1">
+    <main class="bg-background min-h-screen flex flex-col align-middle flex-1">
       <slot />
     </main>
     
