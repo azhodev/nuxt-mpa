@@ -12,7 +12,7 @@ onMounted(() => {
     setTimeout(() => {
         show.value = false
         sessionStorage.setItem('app_session_visited', 'true')
-    }, 1500)
+    }, 1000)
 })
 </script>
 
@@ -30,33 +30,12 @@ onMounted(() => {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, filter 0.5s;
 }
 
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-}
-
-/* Необычный волновой спинер */
-.spinner {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    position: relative;
-    background: conic-gradient(from 0deg,
-            #3b82f6,
-            #9333ea,
-            #f59e0b,
-            #ef4444,
-            #3b82f6);
-    animation: spin 1.2s linear infinite;
-    mask: radial-gradient(farthest-side, transparent calc(100% - 8px), black 0);
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+    filter: blur(5px);
 }
 </style>

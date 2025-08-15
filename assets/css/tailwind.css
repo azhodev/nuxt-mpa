@@ -348,6 +348,6 @@
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
-    filter: blur(3px);
+    filter: blur(5px);
   }
 }

@@ -7,7 +7,7 @@ export const commodities = [
             'Foreign matter: max. 2 %',
             'Damaged kernels: max. 5 % (including max 2% heat damaged)',
             'Broken kernels: max. 5 %',
-        ],
+        ]
     },
     {
         title: 'Feed Wheat',
@@ -19,7 +19,7 @@ export const commodities = [
             'Sprouted Grain: Max 1%',
             'Broken Grain: Max 15%',
             'Foreign Matter: Max 2%',
-        ],
+        ]
     },
     {
         title: 'Milling Wheat',
@@ -33,7 +33,7 @@ export const commodities = [
             'W: 160 min (ISO)',
             'Foreign Matter: 2% max',
             'Bug Damaged: 2% max',
-        ],
+        ]
     },
     {
         title: 'Barley',
@@ -42,7 +42,7 @@ export const commodities = [
             'Test Weight: 62 kg/hl min',
             'Moisture: 14% max',
             'Foreign Matter: 2% max',
-        ],
+        ]
     },
     {
         title: 'Soy-beans',
@@ -54,7 +54,7 @@ export const commodities = [
             'Foreign matters Max 2%',
             'Damaged kernels Max 5%',
             'Splits Max 20%',
-        ],
+        ]
     },
     {
         title: 'Green / Yellow peas',
@@ -65,7 +65,7 @@ export const commodities = [
             'Bulk admixture: 2% max',
             'Other color: 5% max',
             'Damaged: 3% max (including damaged by insect)',
-        ],
+        ]
     },
     {
         title: 'Sun-flower Meal',
@@ -75,7 +75,7 @@ export const commodities = [
             'Fibre: 20.0 % max',
             'Moisture: 12% max',
             'Oil: max 2%',
-        ],
+        ]
     },
     {
         title: 'Wheat Flour',
@@ -87,7 +87,7 @@ export const commodities = [
             'Falling number: Min 280%',
             'Protein: Min 10.5%',
             'Ash content: 0.65%',
-        ],
+        ]
     },
     {
         title: 'Flax Seeds',
@@ -96,7 +96,7 @@ export const commodities = [
             'Moisture: max 13%',
             'Foreign matters: Max 3%',
             'Foreign Oil admixture: max 6%',
-        ],
+        ]
     },
     {
         title: 'Lentils',
@@ -106,7 +106,7 @@ export const commodities = [
             'Protein on dry: 21% min',
             'Foreign matters: Max 0.5 %',
             'Grain admixture: max 3%',
-        ],
+        ]
     },
     {
         title: 'Oats & Graid',
@@ -115,7 +115,7 @@ export const commodities = [
             'Moisture: max 13.5 %',
             'Test weight: Min 520',
             'Foreign matter: max 2 %',
-        ],
+        ]
     },
     {
         title: 'Feed Oats',
@@ -124,7 +124,7 @@ export const commodities = [
             'Moisture: max 13.5 %',
             'Test weight: Min 460',
             'Foreign matter: max 3%',
-        ],
+        ]
     },
     {
         title: 'Milletе',
@@ -132,7 +132,7 @@ export const commodities = [
         specs: [
             'Moisture: max 13.5 %',
             'Foreign matter: max 2 %',
-        ],
+        ]
     },
     {
         title: 'Sorg-hum',
@@ -140,7 +140,7 @@ export const commodities = [
         specs: [
             'Moisture: max 14 %',
             'Foreign matter: max 5%',
-        ],
+        ]
     },
     {
         title: 'Soybean Meal',
@@ -151,7 +151,7 @@ export const commodities = [
             'Crude fat: max 2%',
             'Urease between 0.06-0.15',
             'Urea free',
-        ],
+        ]
     },
     {
         title: 'Sunflo-wer Oil',
@@ -162,7 +162,7 @@ export const commodities = [
             'Flash point: no less than 121 degrees Celsius',
             'Urease between 0.06-0.15',
             'Hydrocarbons Content: max 50 mg/kg',
-        ],
+        ]
     },
     {
         title: 'Sunflo-wer Cake',
@@ -172,7 +172,7 @@ export const commodities = [
             'Fibre: 21.0 % max',
             'Moisture: 9% max',
             'Oil: max 7%',
-        ],
+        ]
     },
     {
         title: 'Soybean Cake',
@@ -182,7 +182,7 @@ export const commodities = [
             'Fibre: 5.5 % max',
             'Crude fat: max 8%',
             'Moisture: max 11 %',
-        ],
+        ]
     },
     {
         title: 'Crude Soybean Oil',
@@ -196,6 +196,9 @@ export const commodities = [
             'Total phosphorus (%) up to 0,020%',
             'Unsaponifiable matter up to 1,5%',
         ],
-    },
-    // добавь другие товары по аналогии
+    }
 ]
+
+
+
+
