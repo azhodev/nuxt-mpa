@@ -23,21 +23,23 @@ async function fetchCommodities(): Promise<void> {
     const response = await fetch('https://f5e93a55981fec3d.mokky.dev/commodities');
     const data: CommoditiesResponse = await response.json();
 
-    if ('message' in data) {
+    if (!response.ok) {
+      if ('message' in data) {
         throw new Error(data.message);
       }
       throw new Error('Failed to fetch commodities');
+    }
 
     commodities.value = data as CardCommodity[];;
-  } catch (err) {
-    if (err instanceof Error) {
-      error.value = err.message;
-    } else {
-      error.value = String(err);
-    }
-  } finally {
-    loading.value = false;
+} catch (err) {
+  if (err instanceof Error) {
+    error.value = err.message;
+  } else {
+    error.value = String(err);
   }
+} finally {
+  loading.value = false;
+}
 }
 
 onMounted(fetchCommodities)
