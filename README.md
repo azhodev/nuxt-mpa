@@ -1,5 +1,9 @@
 # Agrofusion – Nuxt 3 Web App
 
+[![Preview](public/preview.png)](https://nuxt-mpa.netlify.app/)
+
+**Demo:** [https://nuxt-mpa.netlify.app/](https://nuxt-mpa.netlify.app/)
+
 **Agrofusion** is a modern web application for promoting and managing agricultural solutions.  
 Built with Nuxt 3, Tailwind CSS, and a collection of UI and validation tools, it offers a solid foundation for scalable and accessible interfaces.
 
