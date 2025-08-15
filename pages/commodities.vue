@@ -62,7 +62,7 @@ watch(filters, debounce(fetchCommodities, 500), { deep: true });
   <div class="pt-8 pb-15">
     <div class="container flex flex-col gap-8 ">
 
-      <div class="relative w-full max-w-sm items-center">
+      <div class="relative w-full max-w-sm items-center border-secondary border rounded-lg">
         <Input
           id="search"
           v-model="filters.search"
@@ -77,7 +77,7 @@ watch(filters, debounce(fetchCommodities, 500), { deep: true });
 
       <!-- <p v-if="loading">Loading...</p>
       <p v-else-if="error">{{ error }}</p> -->
-      
+
       <TransitionGroup
         name="fade"
         tag="div"
